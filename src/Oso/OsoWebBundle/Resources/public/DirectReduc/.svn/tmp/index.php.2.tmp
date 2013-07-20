@@ -1,0 +1,136 @@
+<?php session_start();
+/*
+include('fonctions/mail.php');
+$destinataire = "franck.parienti@gmail.com";
+$expediteur   = "www.directreduc.com";
+$sujet= 'Email au format HTML';
+$test=new mail($destinataire,$expediteur,$sujet);
+$test->envoi_mail();
+*/
+?>
+
+
+<HTML>
+	<HEAD>
+		<TITLE>Direct Reduc 
+		<?php 
+		if(isset($_GET['titre_annonce'])) 
+		{
+			echo '- ';
+			$titre=strtr($_GET['titre_annonce'], "_", " ");
+			echo $titre;			
+		}
+		else if(isset($_GET['page'])) 
+		{
+			echo '- ';
+			
+			$titre=strtr($_GET['page'], "_", " ");
+			echo $titre;			
+		}
+		?>
+		</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+		<LINK rel="stylesheet" type="text/css" href="design.css" />
+		<Script src="content/login.js"></script>
+		<Script src="fonctions/panier.js"></script>
+		<!-- afin qu'il y ait pas de décalage dans le navigateur Internet explorer, on lui rajoute un correctif css -->
+		<!--[if IE]>
+		
+			<link href="bug.css" rel="stylesheet" type="text/css" media="screen" />
+			
+		<![endif ]-->
+	</HEAD>
+
+	<BODY>
+		<?php include 'fonctions/connexion.php' ?>
+	    <IMG id="haut" src="images/bord_haut.png" /><!-- barre du haut pour les arrondie -->
+		<DIV id="header">
+		
+			<?php include 'structure_page/header.php' ?> <!-- en-tête de la page -->
+			
+		</DIV>
+		<DIV id="nav_menu">
+		
+			<?php include 'structure_page/menu.php' ?> <!-- menu principal -->
+			
+		</DIV>
+		
+		<DIV id="contenu">
+		
+			<DIV id="nav_rech">
+			
+				<?php
+                   	if(isset($_GET['page']))
+					{
+						$page = $_GET['page'];
+					}
+					else
+					{
+						$page = 'actualites';
+					}
+					
+					if ($page != 'recherche_detail')
+					{
+						include 'structure_page/nav_rech.php';
+					}
+				?> <!-- barre de recherche de produit -->
+				
+			</DIV>
+			
+			<DIV id="page"> <!-- le contenu -->
+				<?php
+					if(isset($_GET['lien']))
+					{
+						include $_GET['lien'];
+					}
+					else
+					{
+						
+						include('content/'.$page.'.php');
+					}
+				?>
+				
+	
+
+			</DIV>
+			
+			<IMG id="bor" src="images/en_tete_sous_menu.png" /> <!-- bord arrondie -->
+			<DIV id="menu_services">
+			
+				<?php include 'structure_page/menu_services.php' ?> <!-- boite de connection -->
+				
+			</DIV>
+			<IMG id="bor" src="images/en_tete_sous_menu.png" /> <!-- bord arrondie -->
+			<DIV id="menu_une">
+			
+				<?php include 'structure_page/menu_une.php' ?> <!-- boite afin de voir les derniere annonce paru -->
+				 
+			</DIV>
+			<IMG id="bor" src="images/en_tete_sous_menu.png" /> <!-- bord arrondie -->
+			<DIV id="menu_pub">
+			
+				<?php include 'structure_page/pub.php' ?>
+			</DIV>
+		
+	<center>
+			<DIV id="pub_illustrer">			
+				<?php include 'structure_page/pub_illustrer.php' ?>
+			</DIV>
+		</center>
+		
+		
+		</DIV>
+		
+		
+		
+		<DIV id="footer">
+		
+			<?php include 'structure_page/footer.php' ?> <!-- pied de page -->
+			
+		</DIV>
+		<IMG id="bas" src="images/bord_bas.png" /> <!-- bord arrondie -->
+		<?php include 'fonctions/deconnexion.php' ?>
+	</BODY>
+	
+</HTML>

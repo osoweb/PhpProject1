@@ -1,0 +1,162 @@
+{% extends "OsoUserBundle::layout.html.twig" %}
+{% block title %}
+{{ entity.url }} is looking for a {{ entity.type }}
+{% endblock %}
+
+
+
+{% block body -%}
+    <img src="{{ asset('bundles/osoosoweb/images/shadow-bar-centerbg.png') }}"/>
+    <h2><span class="lef"></span><span class="righ"></span><strong></strong>SITE</h2>           
+   <div><div style='width:1086px;'> <div class='box'>
+
+    <div id="job">
+<h1>{{ entity.url }}</h1>
+<h2>{{ entity.location }}</h2>
+<h3>
+{{ entity.fonction }}
+<small> - {{ entity.type }}</small>
+</h3>
+{% if entity.logo %}
+<div class="logo">
+<a href="{{ entity.url }}">
+<img src="/uploads/jobs/{{ entity.logo }}"
+alt="{{ entity.fonction }} logo" />
+</a>
+</div>
+{% endif %}
+<div class="description">
+{{ entity.description|nl2br }}
+</div>
+<h4>Contact :</h4>
+<p class="how_to_apply">{{ entity.token }}</p>
+<div class="meta">
+<small>posted on {{ entity.createdat|date('m/d/Y') }}</small>
+</div>
+<div style="padding: 20px 0">
+<a href="{{ path('oso_site_edit', { 'id': entity.id }) }}">
+Edit
+</a>
+</div>
+</div>
+               
+    <!--<table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ entity.type }}</td>
+            </tr>
+            <tr>
+                <th>Logo</th>
+                <td>{{ entity.logo }}</td>
+            </tr>
+            <tr>
+                <th>Url</th>
+                <td>{{ entity.url }}</td>
+            </tr>
+            <tr>
+                <th>Fonction</th>
+                <td>{{ entity.fonction }}</td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td>{{ entity.location }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ entity.description }}</td>
+            </tr>
+            <tr>
+                <th>Token</th>
+                <td>{{ entity.token }}</td>
+            </tr>
+            <tr>
+                <th>Is_public</th>
+                <td>{{ entity.ispublic }}</td>
+            </tr>
+            <tr>
+                <th>Is_activated</th>
+                <td>{{ entity.isactivated }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th>Created_at</th>
+                <td>{{ entity.createdat|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Updated_at</th>
+                <td>{{ entity.updatedat|date('Y-m-d H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('oso_site') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('oso_site_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('oso_site_delete', { 'id': entity.id }) }}" method="post">
+            <input type="hidden" name="_method" value="DELETE" />
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>-->
+ </div> </div></div>
+ <img src="{{ asset('bundles/osoosoweb/images/shadow-bar-centerbg.png') }}"/>
+{% block footer %}
+{% endblock %}        
+{% endblock %}
+
+ {% block stylesheets %}
+      <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/osoweb.css') }}" type="text/css" />
+     <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/shadowbox.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/reset.css') }}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/grid.css') }}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/jquery.fancybox-1.3.4.css') }}" type="text/css" media="screen"/>   
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/style.css') }}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/colorbox.css') }}" type="text/css" />
+    <link rel='stylesheet' href="{{ asset('http://fonts.googleapis.com/css?family=Oswald') }}" type='text/css'/>   
+<link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/site.css') }}" type="text/css" media="all" />
+<!--<link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/main.css') }}" type="text/css" media="all" />
+ Design for nicer paging -->
+	<style type="text/css">
+         .box{
+             margin: 0 -116px 0px 5px;
+          }       
+          div.wrapper1{
+          width: 572px; float: left;
+          }
+          div.wrapper2{
+          width: 572px; float: right;
+          }
+	</style>
+        
+        <style type="text/css">
+       /*  .success { text-align: center; padding: 10px; background: #DFF2BF; border: 1px solid; color: #4F8A10; margin-bottom: 10px; }
+form#contacts-form { font-size: 16px; }
+form#contacts-form div { clear: left; margin-bottom: 10px; }
+form#contacts-form label { float: left; margin-right: 0px; text-align: left; width: 100px; font-weight: bold; vertical-align: top; padding-top: 10px; }
+form#contacts-form input[type="text"],
+form#contacts-form input[type="email"]
+    { width: 350px; line-height: 26px; font-size: 20px; min-height: 26px; }
+form#contacts-form textarea { width: 350px; height: 170px; line-height: 26px; font-size: 20px; }
+form#contacts-form input[type="submit"] { margin-left: 4px; width: 358px; line-height: 26px; font-size: 20px; min-height: 26px; }
+form#contacts-form ul li { color: #ff0000; margin-bottom: 5px; }*/
+           
+        </style>
+{% endblock %}  

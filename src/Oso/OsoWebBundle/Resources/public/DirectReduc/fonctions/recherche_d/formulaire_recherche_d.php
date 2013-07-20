@@ -1,0 +1,228 @@
+<?php
+		echo '<script type="text/javascript" src="./fonctions/localisation.js"></script>';
+		echo '<script type="text/javascript" src="./fonctions/special.js"></script>';
+		echo '<script type="text/javascript">afficher_cacher();</script>';
+		echo '<DIV id ="form" style="border: 2px solid; border-color: ff8c00; background-color : #DCDCDC;  display:';
+		
+		if( $rechecheEffec && $verif)
+		{
+			echo 'none;" >';
+		}
+		else
+		{
+			echo 'overflow;" >';
+		}
+		echo '<form  name="recherche" method="POST" action="'.chaine_titre($mot_cle).'_'.$type_prod.'-recherche_detail-2.html" ><br/>';
+			echo '';
+			echo '<TABLE><TR><TD style = "width: 400px; text-align:left;">';
+			echo 'Mot-clés:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ';
+			echo '<input name="mot" id="mot" type="text"';
+			if (isset($mot_cle))
+			{
+				echo 'value="'.$mot_cle.'"';
+			}
+			echo '/>';
+			echo '</TD>';
+			echo '<TD COLSPAN=2 style = "width: 400px; text-align:left;" >';
+				echo 'Catégorie :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';				
+				echo '<select name="type_produit" id="type_produit" style="width:170;" OnChange="ajoutForm('.$nbPieceMin.','.$nbPieceMax.','.$nbChambreMini.','.$nbChambremax.','.$surfHabMini.','.$surfHabMax.','.$surfTerMini.','.$surfTerMax.','.$nbEtageMini.','.$nbEtageMax.','.$anneConsMini.','.$anneConsMax.','.$kiloVoitMin.', '.$kiloVoitMax.', '.$energie_voit.', '.$boite_vitesse.', '.$anneMise.');"/>';
+				echo '<option value="0"';
+				if (!isset($type_prod))
+				{
+					echo 'selected';
+				}
+				echo '>Toutes catégories</option>';
+				$req1="SELECT * FROM `type_offre`;";
+				$exReq1=mysql_query($req1) or die("requete 1 invalide : " . mysql_error());
+				while($resuReq1=mysql_fetch_array($exReq1))
+				{
+					echo "<option style=\"font-weight:bold; background-color:grey; color: white;\" value=\"".$resuReq1['TYPE_OFFRE_ID']."\"";
+					if (isset($type_prod) && $resuReq1['TYPE_OFFRE_ID'] == $type_prod )
+					{
+						echo 'selected';
+					}
+					echo ">". $resuReq1['TYPE_OFFRE_LIBELLE']."</option>";
+					$req2="SELECT * FROM `type_ss_offre` WHERE TYPE_OFFRE_ID = ' ".$resuReq1['TYPE_OFFRE_ID']."';";
+					$exReq2=mysql_query($req2) or die("requete 2 invalide : " . mysql_error());
+					while($resuReq2=mysql_fetch_array($exReq2))
+					{
+						echo '<option value="'.$resuReq2['TYPE_SS_OFFRE_ID'].'"';
+						if (isset($type_prod) && $resuReq2['TYPE_SS_OFFRE_ID'] == $type_prod )
+						{
+							echo 'selected';
+						}
+						echo '>'.$resuReq2['TYPE_SS_OFFRE_LIBELLE'].'</option>';
+					}
+				}
+				echo '</select>';
+			echo '</TD><TR/>';
+	        echo '<TR><TD width= "400" align="left">';
+				echo 'Lieu :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+				echo '<select name="regi" id="regi" style="width:145" onChange="departement();" >';
+					echo '<option value="99" selected>Sélectionner une région</option>';
+					$req3="SELECT * FROM `region` ORDER BY LIB_REG ;";
+					$exReq3=mysql_query($req3) or die("requete 3 invalide : " . mysql_error());
+					while($resuReq3=mysql_fetch_array($exReq3))
+					{
+						echo '<option value="'.$resuReq3['ID_REG'].'" ';
+						if ($resuReq3['ID_REG'] == $region )
+						{
+							echo 'selected';
+						}
+						echo '>'.$resuReq3['LIB_REG'].'</option>';
+					}
+				echo'</select>';
+			echo'</TD>';
+			echo'<TR><TD id ="departement" width="400" align="left" >';
+			
+			echo '</TD>';
+			
+			echo '<TD id ="ville" width= "400" align="center" >';
+			
+			echo '</TD></TR>';
+			if (isset($region))
+			{
+				echo '<script type="text/javascript"> departement('.$departement.'); </script>';
+			}
+			if (isset($departement))
+			{
+				echo '<script type="text/javascript"> ville('.$ville.'); </script>';
+			}
+			echo '<TR>';
+				echo '<TD style = "width: 600px;" align="left" >';
+					echo 'Type de vendeur :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+					echo '<select name="vendeur" id="vendeur" style="width:145;" >';
+						echo '<option value="0"';
+						if (isset($type_vend) && $type_vend == 0)
+						{
+							echo ' selected ';
+						}
+						echo '>Indifférent</option>';
+						echo '<option value="1"';
+						if (isset($type_vend) && $type_vend == 1)
+						{
+							echo ' selected ';
+						}
+						echo ' >Particulier</option>';
+						echo '<option value="2"';
+						if (isset($type_vend) && $type_vend == 2)
+						{
+							echo ' selected ';
+						}	
+						echo ' >Professionnels</option>';
+					echo '</select>';
+				echo '</TD>';
+				echo '<TD style = "width: 800px;" align="left" >';
+					echo 'Type :';
+					echo '<input type=radio'; 
+					if ($type_ann == 1 )
+					{
+						echo ' checked ';
+					}
+					echo ' name="typeAnnonce" value="1"/>Offres';
+					echo '<input type=radio'; 
+					if ($type_ann == 2)
+					{
+						echo ' checked ';
+					}
+					echo ' name="typeAnnonce" value="2"/>Demandes';
+					echo '<input type=radio'; 
+					if ($type_ann == 0)
+						{
+							echo ' checked ';
+						}
+				echo ' name="typeAnnonce" value="0"/>Tous';
+			echo '</TD>';
+		echo '</TR>';
+		echo '<TR>';
+			echo '<TD>';
+				echo 'Photo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+				echo '<input type=radio'; 
+				if ($photo == 0)
+						{
+							echo ' checked ';
+						}
+				echo ' name="photo" value="0"/> Sans';
+				echo '<input type=radio'; 
+				if ($photo == 1)
+				{
+					echo ' checked ';
+				}
+				echo ' name="photo" value="1" checked/> Avec';
+			echo '</TD>';
+			echo '<TD style = "width: 1000px;" align="left" >';
+				echo 'Fraicheur :';
+				echo '<select name="date" id="date" style="width:170;" >';
+					echo '<option value="0" ';
+					if ($fraicheur == 0)
+					{
+						echo ' selected ';
+					}
+					echo '>Indifférent</option>';
+					echo '<option value="1" ';
+					if ($fraicheur == 1)
+					{
+						echo ' selected ';
+					}
+					echo '>Du mois</option>';
+					echo '<option value="2" ';
+					if ($fraicheur == 2)
+					{
+					echo ' selected ';
+					}
+					echo '>De la semaine</option>';
+					echo '<option value="3" ';
+					if ($fraicheur == 3)
+					{
+					echo ' selected ';
+					}
+					echo '>Moins de 24H</option>';
+				echo '</select>';
+			echo '</TD>';
+		echo '</TR>';
+		echo '<TR>';
+			echo '<TD width=667px>';
+			echo '<table><td width=200px>';
+			echo 'Prix minimum : </td><td> <input name="prixmin" type="text"';
+			if ($prix_min != 0)
+			{
+				echo 'value="'.$prix_min.'"';
+			}
+				echo '/>';
+			echo '</td></table>';
+			echo '</TD>';
+			echo '<TD>';
+			echo '<table><td width=65px>';
+			echo 'maximum :</td><td> <input name="prixmax" type="text"';
+			if ($prix_max != 0)
+			{
+				echo 'value="'.$prix_max.'"';
+			}
+				echo '/>';
+				echo '</td></table>';
+			echo '</TD>';
+		echo '</TR>';
+
+			echo '<TD align="right">';
+			echo '</TD>';
+				echo '<input type="submit" onClick="envoi_form(document.forms[\'recherche\'].elements[\'mot\'].value,document.getElementById(\'type_produit\').value)"  value="Rechercher"/>';
+	
+		echo '</TABLE>';
+		echo '<DIV id="spe" style="display:overflow; height : 200px;">
+			</DIV>';
+		echo '<input type="hidden" name="page" value="recherche_detail">';
+	echo '</form>';
+	echo '</DIV>';
+	echo '<center><a id="aff" href="#" style= "color : black; background-color: #006090; text-align : center;">';	
+		if( $rechecheEffec && $verif)
+		{
+			echo '<img src="images/afficher.png">Formulaire de recherche<img src="images/afficher.png"></a> ';
+		}
+		else 
+		{
+			echo '<img src="images/cacher.png">Masquer le formulaire<img src="images/cacher.png"></a> ';
+		}
+	echo '</center>';
+	echo '<SCRIPT>   ajoutForm('.$sousCategImmo.','.$sousCategVoit.','.$nbPieceMin.','.$nbPieceMax.','.$nbChambreMini.','.$nbChambremax.','.$surfHabMini.','.$surfHabMax.','.$surfTerMini.','.$surfTerMax.','.$nbEtageMini.','.$nbEtageMax.','.$anneConsMini.','.$anneConsMax.','.$kiloVoitMin.', '.$kiloVoitMax.', '.$energie_voit.', '.$boite_vitesse.', '.$anneMise.'); 
+ 		</SCRIPT>';
+?>

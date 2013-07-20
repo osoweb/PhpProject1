@@ -1,0 +1,178 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    {{ parent() }}
+    - Cr&eacute;ation 
+{% endblock %}
+
+{% block body %}
+ 
+     <img src="{{ asset('bundles/osoosoweb/images/shadow-bar-centerbg.png') }}"/><!--GALERIE-->
+     <h2><span class="lef"></span><span class="righ"></span><strong></strong> GALERIE </h2>
+<!--<div class="page_spinner"></div>
+<div id="bgStretch"><img src="images/bgff.png" alt=""></div>
+<div class="extra">
+
+	   <div id="works"><div class="first"></div>
+	          <div id="gallery">
+			<div class="none" id="gallery_img">            
+			<li><a  class="iframe" href="{{ asset('http://smtp.osoweb.fr') }}" rel="shadowbox[Mixed];width=1120;height=950" title="Messagerie" ><img src="{{ asset('bundles/osoosoweb/images/gals.png') }}" alt=""><span><strong>site:   osoweb.fr</strong><span>.......,  ........</span></span></a></li>
+			<li><a  class="iframe" href="{{ asset('http://www.osoweb.fr/admin/index.html') }}" rel="shadowbox[Mixed];width=1120;height=950" title="osoweb.fr" ><img src="{{ asset('bundles/osoosoweb/images/gals.png') }}" alt=""><span><strong>site:   osoweb.fr</strong><span>.......,  ........</span></span></a></li>
+			<li><a  class="iframe" href="{{ asset('http://www.osoweb.fr:13389') }}" rel="shadowbox[Mixed];width=1120;height=950" title="VM-BOX"><img src="{{ asset('bundles/osoosoweb/images/gals.png') }}" alt=""><span><strong>site:   osoweb.fr</strong><span>Symfony,  ........</span></span></a></li><br/>
+			<li><a  class="iframe" href="{{ asset('http://www.osoweb.fr/wordpress') }}" rel="shadowbox[Mixed];width=1120;height=950" title="Wordpress" > <img src="{{ asset('bundles/osoosoweb/images/gals.png') }}" alt=""><span><strong>site:   osoweb.fr</strong><span>Wordpress,  ........</span></span></a></li>
+			<li><a  class="iframe" href="{{ asset('bundles/osoosoweb/DirectReduc/index.php') }}" rel="shadowbox[Mixed];width=1120;height=950" title="directreduc.fr"><img src="{{ asset('bundles/osoosoweb/images/gals.png') }}" alt=""><span><strong>site:   directreduc.fr</strong><span>.......,  ........</span></span></a></li>
+			<li><a  class="iframe" href="{{ asset('bundles/osoosoweb/flash/main_v81.swf') }}" rel="shadowbox[Mixed];width=1120;height=950" title="Flash"> <img src="{{ asset('bundles/osoosoweb/images/gals.png') }}" alt=""><span><strong>osoweb.fr</strong><span>Flash,  ........</span></span></a></li>
+                     </div>	
+                 </div>
+	   </div>
+
+  	<div class="container_24">
+		<div id="icons">	
+                       <ul> -->
+				<!--<li class="first">suivez-nous</li>
+				<li><a href="#"><img src="{{ asset('bundles/osoosoweb/images/icon1.png') }}" alt=""></a></li>
+				<li><a href="#"><img src="{{ asset('bundles/osoosoweb/images/icon2.png') }}" alt=""></a></li>
+				<li><a href="#"><img src="{{ asset('bundles/osoosoweb/images/icon3.png') }}" alt=""></a></li>
+				<li><a href="#"><img src="{{ asset('bundles/osoosoweb/images/icon4.png') }}" alt=""></a></li> 
+		        </ul>
+                       <ul><div class="banniere"><div class="first">Bienvenue sur le site: OSOWEB.FR site specialise dans les metiers de l'informatique.......</div></div></ul>
+              </div>
+	
+               <div class="wrapper">-->
+	
+
+
+    
+          <!--</div>wrapper end-->
+
+	<!--</div>	container_24 end	
+</div>		-->	 
+         <iframe id="myIframe"  
+           frameborder="1" 
+           scrolling="no"
+           src="{{ asset('bundles/osoosoweb/SiteJavaScript1/index.html') }}">
+          </iframe>
+        
+
+ <img src="{{ asset('bundles/osoosoweb/images/shadow-bar-centerbg.png') }}"/>
+
+{% block footer %}{% endblock %}
+
+
+{% endblock %}
+
+{% block stylesheets %} 
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/osoweb.css') }}" type="text/css" media="all" />    
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/shadowbox.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/reset.css') }}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/grid.css') }}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/jquery.fancybox-1.3.4.css') }}" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/style.css') }}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/colorbox.css') }}" type="text/css" />
+    <link rel='stylesheet' href="{{ asset('http://fonts.googleapis.com/css?family=Oswald') }}" type='text/css'/>  
+<!-- Design for nicer paging --> 
+        <!--  div#connexion {
+	   margin: 1px 0px -2px 17px;
+	  }
+         #banner {margin: 27px 0 5px 0;    }  -->
+	<style type="text/css">
+	
+             iframe#myIframe {
+	  height: 950px;width: 1190px; float: none; margin: 0 0 0 10px;
+	  }
+                     div.wrapper1{
+          width: 572px; float: left;
+          }
+          div.wrapper2{
+          width: 572px; float: right;
+          }
+	</style>
+
+{% endblock %}
+
+{% block javascripts %}
+  <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/jquery-1.6.js') }}" ></script>
+  <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/jquery-ui-1.8.11.custom.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/scroll.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/script.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/jquery.easing.1.3.js') }}"></script>  
+  <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/jquery.fancybox-1.3.4.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/superfish.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/content_switch.js') }}"></script> 
+  <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/jquery.mousewheel.js') }}"></script> 
+  <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/cScroll.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/jquery-1.4.2.min.js') }}"></script> 
+  <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/swfobject.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/shadowbox.js') }}"></script>
+  <script type="text/javascript">
+          Shadowbox.init({
+             language : "fr",
+             flashParams: {allowfullscreen:'true'},
+	      autostart: true          });
+      </script> 
+      <script type="text/javascript">
+			 window.onload=function() {
+ 				 Shadowbox.setup();
+			};
+      </script> 
+   <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/cufon-yui.js') }}"></script> 
+  <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/cufon-replace.js') }}"></script> 
+  <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/Bebas_400.font.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('bundles/osoosoweb/js/bgStretch.js') }}"></script>
+  <script type="text/javascript"> Cufon.now(); </script>
+	<script language="javascript">
+		$('.site-nav a:first').click(function () {
+		if ($("div#connexion:first").is(":hidden")) {
+		$("div#connexion").slideDown("slow");
+		} else {
+		$("div#connexion").hide();
+		}
+		});
+	</script>
+      
+       <script>
+           $(window).load(function() {	
+	          $('.page_spinner').fadeOut();
+	          $('body').css({overflow:'visible'})
+          })
+</script>
+
+       
+
+
+         <script language="javascript">
+      		var canvas = document.getElementById('tuto');
+     	       var ctx = canvas.getContext('2d');
+
+              //Ajout de plusieurs courbes
+		var numberOfLines = 5;
+		var i = 0;
+		var cycle = function() {
+		ctx.clearRect(0,0,canvas.width,canvas.height);
+		for(var j=0; j<numberOfLines; ++j) {
+		var offset = (i+j*10)/20;
+		ctx.lineWidth = 1+2*(numberOfLines-j); // épaisseur variable en fonction de la ligne
+		ctx.strokeStyle = 'rgba(80,150,240,'+(j/5+0.1)+')'; // opacité variable en fonction de la ligne
+		var y = (Math.sin(offset)+1)*canvas.height/2;
+		var cpy1 = (Math.cos(offset)+0.5)*canvas.height;
+		var cpy2 = canvas.height - cpy1;
+		ctx.beginPath();
+		ctx.moveTo(0, y);
+		ctx.bezierCurveTo(canvas.width/3, cpy1, 2*canvas.width/3, cpy2, canvas.width, y);
+		ctx.stroke();
+		}
+		i++;
+		};
+		setInterval(cycle, 30);
+        </script>
+
+         <script type="text/javascript">
+            var params = {wmode:"transparent", scale:"noscale", quality:"high"};
+            //var so = document.getElementById("fl");SWFObject
+            swfobject.embedSWF("{{ asset('bundles/osoosoweb/flash/folio.swf') }}", "flash4", "70", "50", "9.0.0", null, null, params);
+            //so.addParam('wmode', 'transparent');
+            //so.write("flash1");
+        </script>
+  
+{% endblock %}

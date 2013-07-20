@@ -1,0 +1,47 @@
+#--------------------------------------------------
+# Répertoire : racine
+#--------------------------------------------------
+
+#--------------------------------------------------
+#activation php5
+#AddType x-mapp-php5 .php
+#AddHandler x-mapp-php5 .php
+#--------------------------------------------------
+
+
+# Le serveur doit suivre les liens symboliques :
+Options +FollowSymlinks
+
+# Activation du module de réécriture d'URL :
+RewriteEngine on
+
+#--------------------------------------------------
+# Règles de réécriture d'URL :
+#
+#
+#
+#^ debut de liens
+#$ fin de liens
+#entre parenthese les arguments (ce qui n'est pas entre parenthese est en dur)
+#
+#
+#exemple: DancingMaichen-fruit-3.html   les tiret sont en dur, donc ne sont pas des arguments, .html aussi (\ pour ne pas prendre en compte le .)
+#les arguments sont donc DancingMaichen et fruit et 3
+#
+#le premier bloc est l'adresse recu et le 2ieme est l'adresse appeler (ce qui est reelement utiliser)
+# $1 est le 1er argument, $2 le 2ieme etc...
+#
+#l'adresse appeler est celle de base index.html?page=fruit&id_annonce=3&titre_annonce=DancingMaichen
+#les arguments sont donc recup en $_GET['XXX'], XXX est soit page id_annonce ou autre
+#
+#selon le nombre d'argument et les caracteres utiliser dans ceux ci, htaccess sait quelle ligne utiliser
+#mettre / devant index.php pour mettre sur hebergeur 1&1
+#--------------------------------------------------
+
+RewriteRule ^index\.html$   index.php [L]
+RewriteRule ^([A-Za-z_0-9]*)\.html$   index.php?page=$1 [L]
+RewriteRule ^([A-Za-z_0-9]*)-([0-9]+)\.html$   index.php?page=$1&id_annonce=$2 [L]
+RewriteRule ^([A-Za-z_0-9]*)-([A-Za-z_0-9]*)-([0-9]*)\.html$   index.php?page=$2&id_annonce=$3&titre_annonce=$1 [L]
+RewriteRule ^([0-9]+)-([A-Za-z_]*)\.html$   index.php?page=$2&offre_demande=$1 [L]
+RewriteRule ^([A-Za-z_0-9]*)-([0-9]+)-([0-9]+)\.html$   index.php?page=$1&id_annonce=$2&page_avis=$3 [L]
+RewriteRule ^([A-Za-z_0-9]*)-([A-Za-z_]*)-([0-9]+)-([0-9_]*)\.html$   index.php?page=$2&id_annonce=$3&page_avis=$4&titre_annonce=$1 [L]

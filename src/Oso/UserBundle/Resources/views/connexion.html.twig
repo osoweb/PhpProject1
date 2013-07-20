@@ -1,0 +1,43 @@
+
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+    <a style='color:#FFFFFF;text-decoration:none;outline:medium none' href="{{ path('fos_user_profile_show') }}">Bonjour {{ app.user.username }} - {{ app.user.email }}</a> 
+     <a style='color:#FFFFFF;text-decoration:none'> | </a>
+    <a style='color:#FFFFFF;text-decoration:none;outline:medium none' href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans([], 'FOSUserBundle') }}</a>
+{% else %}
+    <a style='color:#FFFFFF;text-decoration:none;outline:medium none' href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans([], 'FOSUserBundle') }}</a> 
+     <a style='color:#FFFFFF;text-decoration:none'> | </a>
+    <a style='color:#FFFFFF;text-decoration:none;outline:medium none' href="{{ path('fos_user_registration_register') }}">{{ 'layout.register'|trans([], 'FOSUserBundle') }}</a>
+{% endif %}
+
+
+{% for key, flash in app.session.getFlashes() %}
+<div class="{{ flash }}">
+    {{ key|trans([], 'FOSUserBundle') }}
+</div>
+{% endfor %}
+    
+ {% block stylesheets %}
+
+<!-- Design for nicer paging -->
+	<style type="text/css">
+         /*.box{margin: 0 47px 10px 5px;height:600px;}*/      
+	</style>
+        
+        <style type="text/css">
+form.fos_user_registration_register { font-size: 16px; }
+form.fos_user_registration_register div { clear: left; margin-bottom: 10px; width: 400px; }
+form.fos_user_registration_register label { float: left; margin-right: 10px; text-align: center; width: 150px; font-weight: bold; vertical-align: top; padding-top: 0px; }
+form.fos_user_registration_register input[type="text"],
+form.fos_user_registration_register input[type="email"],
+form.fos_user_registration_register input[type="password"]
+    { width: 220px; line-height: 26px; font-size: 20px; min-height: 26px; vertical-align: top;background: url("../images/bg-input.png") repeat scroll left top transparent;
+    border: 1px solid #203354;
+    color: #72809F; }
+form.fos_user_registration_register textarea { width: 350px; height: 170px; line-height: 26px; font-size: 20px; }
+form.fos_user_registration_register input[type="submit"] { margin-left: 40px; width: 358px; line-height: 26px; font-size: 20px; min-height: 26px;background: url("../images/bg-input.png") repeat scroll left top transparent;
+    border: 1px solid #203354;
+    color: #72809F; }
+form.fos_user_registration_register ul li { color: #ff0000; margin-bottom: 5px; }
+       </style>    
+        
+{% endblock %}   

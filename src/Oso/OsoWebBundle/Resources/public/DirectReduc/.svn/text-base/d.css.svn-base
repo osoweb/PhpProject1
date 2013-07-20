@@ -1,0 +1,91 @@
+body
+ {
+	background: url('images/bag.jpg') top center no-repeat;
+	background-color : #06071A;
+}
+.none
+{
+	text-decoration: none;
+}
+#menu
+{
+	margin-left : 6%;
+	margin-top:1%;
+}
+#nav_menu
+{	
+	margin:auto;
+	width: 1000px;
+	margin-left : 90%;
+	margin-top:10%;
+	height:50px;
+	font-family:Verdana, Tahoma, sans-serif;
+	font-size:75%;	
+}
+
+#nav_menu_list
+{
+	position:absolute;
+	width:1000px;
+	margin:auto;
+	margin-left:4%;
+	padding:0;
+	list-style-type:none;
+}
+
+#nav_menu_list li
+{
+	float:left;
+	margin:0;
+	padding:0;
+	width:12%;
+}
+
+#nav_menu_list li a
+{ 
+	display: block; 
+	height: 1%; 
+	margin:0;
+	padding: 14px 5px;
+	text-decoration: none;
+	color: #FFF;
+}
+
+#nav_menu_list li a:hover
+{
+	color : ff8c00;
+}
+/****************************/
+/*	Design des sous-menus	*/
+/****************************/
+
+#nav_menu_list li:hover .sous_menu { display: block;}
+
+#nav_menu_list .sous_menu
+{
+	list-style-type: none;
+	display: none;
+	margin:0;
+	padding:0;
+}
+#nav_menu_list .sous_menu li
+{
+	float:none;
+	width:100%;
+	font-size:75%;
+}
+
+#nav_menu_list .sous_menu li a
+{ 
+	color: #FFF;
+	text-decoration: none;
+	padding: 8px 2px;
+	border-bottom: 1px solid #15081f;
+	background:white;
+	
+}
+
+#nav_menu_list .sous_menu li a:hover
+{
+		display: block; 
+}

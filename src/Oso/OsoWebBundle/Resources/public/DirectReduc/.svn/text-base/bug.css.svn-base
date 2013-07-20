@@ -1,0 +1,48 @@
+#header
+{	
+margin-top : -5px;
+height:154px;
+}
+
+#banner
+{
+	padding-top:10px;
+}
+
+#nav_menu_list
+{
+width: 100%;
+margin-left:5%;
+}
+#nav_menu_list .sous_menu 
+{
+	visibility: hidden;
+}
+}
+#nav_menu_list .sous_menu
+{
+
+	display: block;
+}
+}
+#contenu
+{
+	margin-top: 0px;
+}
+#page
+{
+	height : 960px;
+}
+
+#bor
+{
+	margin-left:22px;
+	margin-bottom : -4px;
+}
+
+#menu_services
+{
+	
+	padding-bottom : 15px;
+	
+}

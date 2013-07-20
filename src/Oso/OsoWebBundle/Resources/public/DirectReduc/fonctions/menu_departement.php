@@ -1,0 +1,148 @@
+<option  value="0" <?php if($local_offre==0) echo 'selected';?>>Toutes les localisations</option>
+
+
+	<option value="67" class="departement" <?php if($local_offre==67) echo 'selected';?>>Bas Rhin (67)</option>
+	<option value="68" class="departement" <?php if($local_offre==68) echo 'selected';?> >Haut Rhin (68)</option>
+
+	<option value="24" class="departement" <?php if($local_offre==24) echo 'selected';?>>Dordogne (24)</option>
+	<option value="33" class="departement" <?php if($local_offre==33) echo 'selected';?>>Gironde (33)</option>
+	<option value="40" class="departement" <?php if($local_offre==40) echo 'selected';?>>Landes (40)</option
+	><option value="47" class="departement" <?php if($local_offre==47) echo 'selected';?>>Lot et Garonne (47)</option>
+	<option value="64" class="departement" <?php if($local_offre==64) echo 'selected';?>>Pyr&eacute;n&eacute;es Atlantiques (64)</option>
+
+
+	<option value="03" class="departement" <?php if($local_offre==03) echo 'selected';?>>Allier (03)</option>
+	<option value="15" class="departement" <?php if($local_offre==15) echo 'selected';?>>Cantal (15)</option>
+	<option value="43" class="departement" <?php if($local_offre==43) echo 'selected';?>>Haute Loire (43)</option>
+	<option value="63" class="departement" <?php if($local_offre==63) echo 'selected';?>>Puy de D&ocirc;me (63)</option>
+
+	<option value="14" class="departement" <?php if($local_offre==14) echo 'selected';?>>Calvados (14)</option>
+	<option value="50" class="departement" <?php if($local_offre==50) echo 'selected';?>>Manche (50)</option>
+
+	<option value="61" class="departement" <?php if($local_offre==61) echo 'selected';?>>Orne (61)</option>
+
+	<option value="21" class="departement" <?php if($local_offre==21) echo 'selected';?>>C&ocirc;te d'Or (21)</option>
+<option value="58" class="departement" <?php if($local_offre==58) echo 'selected';?>>Ni&egrave;vre (58)</option>
+<option value="71" class="departement" <?php if($local_offre==71) echo 'selected';?>>Sa&ocirc;ne et Loire (71)</option>
+<option value="89" class="departement" <?php if($local_offre==89) echo 'selected';?>>Yonne (89)</option>
+
+
+<option value="22" class="departement" <?php if($local_offre==22) echo 'selected';?>>C&ocirc;tes d'Armor (22)</option>
+	<option value="29" class="departement" <?php if($local_offre==29) echo 'selected';?>>Finist&egrave;re (29)</option>
+	<option value="35" class="departement" <?php if($local_offre==35) echo 'selected';?>>Ille et Vilaine (35)</option>	
+	<option value="56" class="departement" <?php if($local_offre==56) echo 'selected';?>>Morbihan (56)</option>
+
+	
+	<option value="18" class="departement" <?php if($local_offre==18) echo 'selected';?>>Cher (18)</option>
+	<option value="28" class="departement" <?php if($local_offre==28) echo 'selected';?>>Eure et Loir (28)</option>
+	<option value="36" class="departement" <?php if($local_offre==36) echo 'selected';?>>Indre (36)</option>
+
+	<option value="37" class="departement" <?php if($local_offre==37) echo 'selected';?>>Indre et Loire (37)</option>
+	<option value="41" class="departement" <?php if($local_offre==41) echo 'selected';?>>Loir et Cher (41)</option>
+	<option value="45" class="departement" <?php if($local_offre==45) echo 'selected';?>>Loiret (45)</option>
+
+	<option value="08" class="departement" <?php if($local_offre==08) echo 'selected';?>>Ardennes (08)</option>
+	<option value="10" class="departement" <?php if($local_offre==10) echo 'selected';?>>Aube (10)</option>
+	<option value="52" class="departement" <?php if($local_offre==52) echo 'selected';?>>Haute Marne (52)</option>
+	<option value="51" class="departement" <?php if($local_offre==51) echo 'selected';?>>Marne (51)</option>
+
+
+	<option value="1000" class="departement" <?php if($local_offre==1000) echo 'selected';?>>Corse du Sud (2A)</option>
+	<option value="2000" class="departement" <?php if($local_offre==2000) echo 'selected';?>>Haute Corse (2b)</option>
+
+	<option value="971" class="departement" <?php if($local_offre==971) echo 'selected';?>>Guadeloupe</option>
+	<option value="973" class="departement" <?php if($local_offre==973) echo 'selected';?>>Guyane</option>
+	<option value="972" class="departement" <?php if($local_offre==972) echo 'selected';?>>Martinique</option>
+	<option value="974" class="departement" <?php if($local_offre==974) echo 'selected';?>>R&eacute;union</option>
+	<option value="988" class="departement" <?php if($local_offre==988) echo 'selected';?>>Nouvelle Cal&eacute;donie</option>
+	<option value="976" class="departement" <?php if($local_offre==976) echo 'selected';?>>Mayotte</option>
+	<option value="987" class="departement" <?php if($local_offre==987) echo 'selected';?>>Polyn&eacute;sie Fran&ccedil;aise</option>
+	<option value="975" class="departement" <?php if($local_offre==975) echo 'selected';?>>Saint Pierre et Miquelon</option>
+	<option value="986" class="departement" <?php if($local_offre==986) echo 'selected';?>>Wallis et Futuna</option>
+
+
+	<option value="25" class="departement" <?php if($local_offre==25) echo 'selected';?>>Doubs (25)</option>
+	<option value="70" class="departement" <?php if($local_offre==70) echo 'selected';?>>Haute Sa&ocirc;ne (70)</option>
+	<option value="39" class="departement" <?php if($local_offre==39) echo 'selected';?>>Jura (39)</option>
+	<option value="90" class="departement" <?php if($local_offre==90) echo 'selected';?>>Territoire de Belfort (90)</option>
+
+
+	<option value="27" class="departement" <?php if($local_offre==27) echo 'selected';?>>Eure (27)</option>
+	<option value="76" class="departement" <?php if($local_offre==76) echo 'selected';?>>Seine Maritime (76)</option>
+
+
+	<option value="75" class="departement" <?php if($local_offre==75) echo 'selected';?>>Paris (75)</option>
+	<option value="91" class="departement" <?php if($local_offre==91) echo 'selected';?>>Essonne (91)</option>
+	<option value="92" class="departement" <?php if($local_offre==92) echo 'selected';?>>Hauts de Seine (92)</option>
+	<option value="77" class="departement" <?php if($local_offre==77) echo 'selected';?>>Seine et Marne (77)</option>
+	<option value="93" class="departement" <?php if($local_offre==93) echo 'selected';?>>Seine St Denis (93)</option>
+	<option value="94" class="departement" <?php if($local_offre==94) echo 'selected';?>>Val de Marne (94)</option>
+	<option value="95" class="departement" <?php if($local_offre==95) echo 'selected';?>>Val d'Oise (95)</option>
+<option value="78" class="departement" <?php if($local_offre==78) echo 'selected';?>>Yvelines (78)</option>
+
+
+<option value="11" class="departement" <?php if($local_offre==11) echo 'selected';?>>Aude (11)</option>
+<option value="30" class="departement" <?php if($local_offre==30) echo 'selected';?>>Gard (30)</option>
+<option value="34" class="departement" <?php if($local_offre==34) echo 'selected';?>>H&eacute;rault (34)</option>
+<option value="48" class="departement" <?php if($local_offre==48) echo 'selected';?>>Loz&egrave;re (48)</option>
+<option value="66" class="departement" <?php if($local_offre==66) echo 'selected';?>>Pyr&eacute;n&eacute;es Orientales (66)</option>
+
+
+<option value="23" class="departement" <?php if($local_offre==23) echo 'selected';?>>Creuse (23)</option>
+<option value="19" class="departement" <?php if($local_offre==19) echo 'selected';?>>Corr&egrave;ze (19)</option>
+<option value="87" class="departement" <?php if($local_offre==87) echo 'selected';?>>Haute Vienne (87)</option>
+
+
+<option value="54" class="departement" <?php if($local_offre==54) echo 'selected';?>>Meurthe et Moselle (54)</option>
+<option value="55" class="departement" <?php if($local_offre==55) echo 'selected';?>>Meuse (55)</option>
+<option value="57" class="departement" <?php if($local_offre==57) echo 'selected';?>>Moselle (57)</option>
+<option value="88" class="departement" <?php if($local_offre==88) echo 'selected';?>>Vosges (88)</option>
+
+
+<option value="09" class="departement" <?php if($local_offre==09) echo 'selected';?>>Ari&egrave;ge (09)</option>
+<option value="12" class="departement" <?php if($local_offre==12) echo 'selected';?>>Aveyron (12)</option>
+<option value="31" class="departement" <?php if($local_offre==31) echo 'selected';?>>Haute Garonne (31)</option>
+<option value="32" class="departement" <?php if($local_offre==32) echo 'selected';?>>Gers (32)</option>
+<option value="46" class="departement" <?php if($local_offre==46) echo 'selected';?>>Lot (46)</option>
+<option value="65" class="departement" <?php if($local_offre==65) echo 'selected';?>>Hautes Pyr&eacute;n&eacute;es (65)</option>
+<option value="81" class="departement" <?php if($local_offre==81) echo 'selected';?>>Tarn (81)</option>
+<option value="82" class="departement" <?php if($local_offre==82) echo 'selected';?>>Tarn et Garonne (82)</option>
+
+
+<option value="59" class="departement" <?php if($local_offre==59) echo 'selected';?>>Nord (59)</option>
+<option value="62" class="departement" <?php if($local_offre==62) echo 'selected';?>>Pas de Calais (62)</option>
+
+
+<option value="44" class="departement" <?php if($local_offre==44) echo 'selected';?>>Loire Atlantique (44)</option>
+<option value="49" class="departement" <?php if($local_offre==49) echo 'selected';?>>Maine et Loire (49)</option>
+<option value="53" class="departement" <?php if($local_offre==53) echo 'selected';?>>Mayenne (53)</option>
+<option value="72" class="departement" <?php if($local_offre==72) echo 'selected';?>>Sarthe (72)</option>
+<option value="85" class="departement" <?php if($local_offre==85) echo 'selected';?>>Vend&eacute;e (85)</option>
+
+
+<option value="02" class="departement" <?php if($local_offre==02) echo 'selected';?>>Aisne (02)</option>
+<option value="60" class="departement" <?php if($local_offre==60) echo 'selected';?>>Oise (60)</option>
+<option value="80" class="departement" <?php if($local_offre==80) echo 'selected';?>>Somme (80)</option>
+
+
+<option value="16" class="departement" <?php if($local_offre==16) echo 'selected';?>>Charente (16)</option>
+<option value="17" class="departement" <?php if($local_offre==17) echo 'selected';?>>Charente Maritime (17)</option>
+<option value="79" class="departement" <?php if($local_offre==79) echo 'selected';?>>Deux S&egrave;vres (79)</option>
+<option value="86" class="departement" <?php if($local_offre==86) echo 'selected';?>>Vienne (86)</option>
+
+
+<option value="04" class="departement" <?php if($local_offre==04) echo 'selected';?>>Alpes de Haute Provence (04)</option>
+<option value="06" class="departement" <?php if($local_offre==06) echo 'selected';?>>Alpes Maritimes (06)</option>
+<option value="13" class="departement" <?php if($local_offre==13) echo 'selected';?>>Bouches du Rh&ocirc;ne (13)</option>
+<option value="05" class="departement" <?php if($local_offre==05) echo 'selected';?>>Hautes Alpes (05)</option>
+<option value="83" class="departement" <?php if($local_offre==83) echo 'selected';?>>Var (83)</option>
+<option value="84" class="departement" <?php if($local_offre==84) echo 'selected';?>>Vaucluse (84)</option>
+
+<option value="01" class="departement" <?php if($local_offre==01) echo 'selected';?>>Ain (01)</option>
+<option value="07" class="departement" <?php if($local_offre==07) echo 'selected';?>>Ard&egrave;che (07)</option>
+<option value="26" class="departement" <?php if($local_offre==26) echo 'selected';?>>Dr&ocirc;me (26)</option>
+<option value="74" class="departement" <?php if($local_offre==74) echo 'selected';?>>Haute Savoie (74)</option>
+<option value="38" class="departement" <?php if($local_offre==38) echo 'selected';?>>Is&egrave;re (38)</option>
+<option value="42" class="departement" <?php if($local_offre==42) echo 'selected';?>>Loire (42)</option>
+<option value="69" class="departement" <?php if($local_offre==69) echo 'selected';?>>Rh&ocirc;ne (69)</option>
+<option value="73" class="departement" <?php if($local_offre==73) echo 'selected';?>>Savoie (73)</option>

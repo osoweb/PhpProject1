@@ -1,0 +1,5 @@
+## YAML Template.
+# src/Oso/OsoWebBundle/Resources/config/config.yml
+parameters:
+    #  contact email address
+    oso.emails.contact_email: osoosoweb@gmail.com

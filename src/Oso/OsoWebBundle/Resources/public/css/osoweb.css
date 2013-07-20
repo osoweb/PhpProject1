@@ -1,0 +1,408 @@
+/* ==============================================
+   FEUILLE DE STYLES DES GABARITS HTML/CSS
+   ============================================== */
+
+
+/* --- STYLES DE BASE POUR LE TEXTE ET LES PRINCIPAUX �L�MENTS ---url(nav3r.png) top right no-repeat; */
+	        #banner{    			   
+                    color: #fff;				 
+                    /*background-color:white ;
+                    background:url(../images/bg-input.png) repeat left top;*/       
+                    border:none ;
+		     			
+		      padding:  1px 5px 0px 0px ;
+		      height: 264px; 
+		     color: #897048;
+                   text-shadow: 2px 2px 2px #ddccb5;
+                   font-size: 15px;	                } 
+		 div#connexion{
+                     background:url(../images/bg-input.png) repeat left top; 
+                     float:center;
+                     height:100px; width: 1250px;
+                     display:none; 
+                     margin: 6px 0px -24px -1px;
+                }		
+		  body{
+		   	 background: none;width:98%;
+		  }
+
+		      #page {
+            width:99%;/*width: 500px;  ou  ou width:20em; */
+            margin-left: auto;
+            margin-right: auto;
+            }
+			
+		  .box{  
+			float: right;   
+                    width: 100%;
+                    margin: 0 0 0 5px;
+                    background: none;
+	             background:url(../images/bg-input.png) repeat left top;
+		      /*overflow:auto;*/ 
+		     color:#72809f;
+			 /*color:blue;*/ 
+	             border:1px solid #203354;
+			}           
+               .box1{  
+		      float: right;   
+                    width: 332px; height: 200px;
+                    margin: 0 0 0 5px;
+                    background: none;
+		      color:#72809f; 	 
+			}    
+
+                div {
+                    border: none;
+                    background: none;
+                    height: auto;
+                    padding: 5px;
+                }
+
+                div#column1 {
+                     border-radius: 10px;float: left;   
+                    width: 200px; height: 350px;/**/
+                    margin: 0 5px 0 0;
+                   color:#72809f; text-shadow: 2px 2px 2px #ddccb5;
+                   border:1px solid #203354;
+                    background:url(../images/bg-input.png) repeat left top;
+                    /*background-color:blue;border: none;*/
+                    font-size: 17px;
+                }
+				
+                div#column2, div#column3 {
+                    /**/ float: right;  
+                     position:relative;
+                    margin: 0 0 0 5px;
+                    background: none;
+		      color : black;
+		      border:none ;
+                }
+
+		  div#column2{
+		      filter: alpha(opacity=50);
+                    -moz-opacity: 0.5;
+                    -khtml-opacity: 0.5;
+                    opacity: 0.7;
+			background: none;width: 105px;
+		   }
+
+		   div#column3{
+		       color: #897048;
+                   text-shadow: 2px 2px 2px blue;
+                   font-size: 17px;             
+		     width: 150px; 
+		   }
+
+                div#column4 {
+		      widht: 800px;
+		      background: none;border:none ;
+                    margin: 0 165px 0 160px;		
+                    background-image:url(../images/p.jpg);
+                    position:absolu;
+		      background-repeat: none;	
+		      filter: alpha(opacity=50);
+                    -moz-opacity: 0.5;
+                    -khtml-opacity: 0.5;
+                    opacity: 0.7;
+			color: #897048;
+                     text-shadow: 2px 2px 2px #ddccb5;
+                    font-size: 15px;
+                }
+                div#footers {
+                    height: 195px;width:1250px;
+                    margin: 1px 0px 0 0px;
+                    /*clear: both;background-color:blue;
+			background-image:url(../images/bar1.png);bg-input*/
+                    color:#72809f; text-shadow: 2px 2px 2px #ddccb5;
+                   border:1px solid #203354;
+                   background:url(../images/foot5.png) repeat left top;
+		      border:none ;
+                }
+
+              /*========================== LISTS ============================*/
+
+.site-nav {/*background:transparent url(../images/back.gif) repeat-x;*/}
+	.site-nav li { float:left; padding-right:3px;}
+	.site-nav li.last{ padding-right:0;}
+	.site-nav li a 
+        {
+	display:block;
+	background:url(../images/0b.png) no-repeat;
+        height:70px;
+	float:left;
+	color:#9a9898;
+	font-size:17px;
+	text-decoration:none;
+	padding-right:8px;
+	font-family:Arial Black, Arial, Helvetica, sans-serif;
+	text-shadow:2px 2px  #fff;
+        
+}
+/*.site-nav li a b {float:left; display:block; padding:0 60px 0 0; background:url(../images/0.gif) no-repeat right top;}
+.site-nav li.current a {color:#000; background:url(../images/0b.png) no-repeat;}
+.site-nav li current a b {color:#000; background:url(../images/2.gif) no-repeat right top;}*/
+.site-nav li a:hover
+.site-nav li .active{
+	/*background:url(../images/button-right-act.png) no-repeat right top;*/
+        /*background:url(../flash/machine.swf);
+        padding-top: 5px;background: url(../images/2a.gif) no-repeat;*/
+	color:#fff;
+	text-shadow:none; 
+        
+}
+.site-nav li a:hover
+.site-nav li a span{
+	display:block;
+	/*background:url(../images/button-left.png) no-repeat left top;*/
+	padding-left:8px
+}
+.site-nav li a:hover span,
+.site-nav li .active span{
+	/*background:url(../images/button-left-act.png) no-repeat left top;*/
+        display:block;
+        font-style:normal;
+	
+}
+.site-nav li a em{
+	display:block;
+	/*background:url(../images/button-bg.png) repeat-x left top;*/
+	font-style:normal;
+	padding:12px 14px 15px 12px;
+}
+.site-nav li a:hover em,
+.site-nav li .active em{
+	/*background:url(../images/button-bg-act.png) repeat-x left top;*/
+}
+.site-nav li a:hover {}
+.p1-cont .col-1 h2{
+	margin-left:13px;
+}
+
+ /*========================== CONTACT FORM ============================*/
+.bottom-text{
+	width:360px;
+	margin-left:15px;
+	background-color:none;
+}
+#contacts-form .field { 
+	height:66px;border:none;
+}
+#contacts-form input {
+	width:251px; 
+	padding:5px 0 4px 5px; 
+	background:url(../images/bg-input.png) repeat left top;
+	color:#72809f; 
+	border:1px solid #203354;
+	vertical-align:top;	
+	line-height:1.2em;
+}
+#contacts-form textarea { 
+	width:251px; 
+	height:214px; 
+	overflow:auto;
+	background:url(../images/bg-input.png) repeat left top;
+	color:#72809f; 
+	border:1px solid #203354;
+	padding:5px 0 2px 5px; 
+}
+.cont-buttons{
+	margin-top:-15px;
+}
+.cont-buttons a{
+	margin-left:20px;
+}
+
+              /*========================== LISTS2 ============================*/
+ul{
+                  height: 30px;
+		    margin-left:5px;
+		    padding-left:200px;
+		    list-style: none;
+                  background-color:none;margin-top:-37px;
+		}
+
+.site-nav1 {}
+	.site-nav1 li { float:left; padding-right:3px;}
+	.site-nav1 li.last{ padding-right:0;}
+	.site-nav1 li a {
+	
+	background:url(../images/button-right.png) no-repeat right top;
+	float:left;
+	color:#9a9898;
+	font-size:17px;
+	text-decoration:none;
+	padding-right:8px;
+	font-family:Arial Black, Arial, Helvetica, sans-serif;
+	text-shadow:2px 2px  #fff;
+}
+.site-nav1 li a:hover,
+.site-nav1 li .active{
+	background:url(../images/button-right-act.png) no-repeat right top;
+	color:#fff;
+	text-shadow:none;
+}
+.site-nav1 li a span{
+	
+	background:url(../images/button-left.png) no-repeat left top;
+	padding-left:px
+}
+.site-nav1 li a:hover span,
+.site-nav1 li .active span{
+	background:url(../images/button-left-act.png) no-repeat left top;
+}
+.site-nav1 li a em{
+	display:block;
+	background:url(../images/button-bg.png) repeat-x left top;
+	font-style:normal;
+	padding:12px 14px 15px 12px;
+}
+.site-nav1 li a:hover em,
+.site-nav1 li .active em{
+background:url(../images/button-bg-act.png) repeat-x left top;
+}
+
+ /*========================== LISTS ============================*/
+		
+
+		#Menu li{
+		    margin-bottom:7px;
+		    padding: 0 0 0 0;
+		    }
+
+		#Menu li a{
+		    display: block;
+		    padding:0 0 4px 0;
+		    /*background:url(../images/lien11.jpg) no-repeat left bottom;*/
+		    text-decoration : none;			
+		}
+
+		#Menu li a span{
+		     position: relative;
+		     top: -1px;
+		     display:block;
+		     padding:10px 10px 6px 10px;
+		     /*background:url(../images/lien11.jpg) no-repeat left top;*/
+		}
+
+		#Menu li a:hover,
+		#Menu li a:hover span,
+		#Menu li a:focus,
+		#Menu li a:focus span{
+		      /*background-image:url(../images/lien12.jpg)*/
+		 }				
+				
+                border_rounded {
+                    background-color: #ddccb5;
+                    -moz-border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    border: 2px solid #897048;
+                    padding: 10px;
+                    width: 310px;
+                }
+				 
+                multiplecolumns{
+                  -moz-column-width: 130px;
+                  -webkit-column-width: 130px;
+                  -moz-column-gap: 20px;
+                  -webkit-column-gap: 20px;
+                  -moz-column-rule: 1px solid #ddccb5;
+                  -webkit-column-rule: 1px solid #ddccb5;
+                }
+				 
+                hr{
+                   column-span: all;
+                } 
+                 
+		 #wrapper{
+		      
+                    width: auto;
+		      /* background-color:#000000;*/
+		 }		                  
+                
+		.wrapper1 {width:100%; overflow:auto;}
+
+              #page_services .col1{ width:278px;}
+
+	       .col1{ width:372px; float:left;}
+	       .col2{ width:255px; float:left;}
+
+              .marg_right1{ margin-right:19px;}
+	       #page_services .marg_right1{ margin-right:15px;}
+	       .pad_bot1{ padding-bottom:64px}
+	       .pad_left1{ padding-left:40px;}
+
+              .font1{ color:#fff; font-size:11px; text-transform:uppercase}
+
+              .link1{ position:relative; display:inline-block;}
+		.link1 span{ position: absolute; left:0; width:100%; height:1px; background:#fff; bottom:2px;}
+
+                 
+		#leftcolumn{
+                  border: none;
+		    -moz-border-radius: 10px; 
+                  /*background: #CCC8B3;*/
+		    border:1px solid #203354;
+                  background:url(../images/bg-input.png) repeat left top;
+                  margin: 10px 5px 10px 0px;
+                  padding: 10px;
+                  height: 350px;
+                  width: 578px;
+                  float:left;
+		    filter: alpha(opacity=10);
+                  -moz-opacity: 0.5;
+                  -khtml-opacity: 0.5;
+                  opacity: 0.5;
+		    color: #897048;
+             }				
+                 
+		#rightcolumn{
+		     border:none ;
+		     float:left;
+		     -moz-border-radius: 10px; 
+                   <!-- -webkit-border-radius: 15px; -->
+                   <!-- border: 1 px solid #897048;-->
+                   border: 1px solid #ccc;
+                   background-color: black ;  
+                    filter: alpha(opacity=10);
+                  -moz-opacity: 0.5;
+                  -khtml-opacity: 0.5;
+                  opacity: 0.5;
+                   margin: 10px 0px 10px 0px;
+                   padding: 10px;
+                   height: 350px;
+                   width: 195px;
+                   display: inline;position: relative;                   
+              }
+
+		#myIframe{
+			float:right;
+                        width:580px;
+                        height: 550px;
+			border:none;
+			/* padding: 10px;*/margin: 10px 0px 10px 0px;
+			background-color: none;
+		}
+				
+		#ulc {
+                   float: right;
+                   margin-top: 16px;
+                   margin-right: 16px;
+                   margin-bottom: 0px;
+                   margin-left: 0px;
+                   padding: 0px;
+                   list-style: none;
+              }
+
+		#lic {
+                  float: left;
+                  margin-left: 3px;
+              }
+
+	        #en-tete {
+                  overflow: hidden;
+                  background-color: #dae0d2;
+                  background-image: none;
+                  background-position: bottom;
+                  background-repeat: repeat-x;
+               }
+            

@@ -1,0 +1,28 @@
+## YAML Template.
+# src/Oso/OsoWebBundle/Resources/config/doctrine/Dev.orm.yml
+Oso\OsoWebBundle\Entity\Dev:
+    type: entity
+    table: dev
+    id:
+      id:
+        type: integer
+        generator: { strategy: AUTO }
+    fields:
+      url:
+        type: string
+        length: 255
+      email:
+        type: string
+        length: 255
+        unique: true
+      token:
+        type: string
+        length: 255
+      created_at:
+        type: datetime
+    oneToMany:
+      categorie_devs:
+        targetEntity: CategorieDev
+        mappedBy: dev
+    lifecycleCallbacks:
+      prePersist: [ setCreatedAtValue ]

@@ -1,0 +1,30 @@
+oso_site:
+    pattern:  /
+    defaults: { _controller: "OsoOsoWebBundle:Site:index" }
+
+oso_site_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "OsoOsoWebBundle:Site:show" }
+
+oso_site_new:
+    pattern:  /new
+    defaults: { _controller: "OsoOsoWebBundle:Site:new" }
+
+oso_site_create:
+    pattern:  /create
+    defaults: { _controller: "OsoOsoWebBundle:Site:create" }
+    requirements: { _method: post }
+
+oso_site_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "OsoOsoWebBundle:Site:edit" }
+
+oso_site_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "OsoOsoWebBundle:Site:update" }
+    requirements: { _method: post|put }
+
+oso_site_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "OsoOsoWebBundle:Site:delete" }
+    requirements: { _method: post|delete }

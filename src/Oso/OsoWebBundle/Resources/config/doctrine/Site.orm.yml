@@ -1,0 +1,58 @@
+## YAML Template.
+# src/Oso/OsoWebBundle/Resources/config/doctrine/Site.orm.yml
+Oso\OsoWebBundle\Entity\Site:
+    type: entity
+    table: site
+    id:
+      id:
+        type: integer
+        generator: { strategy: AUTO }
+    fields:
+      type:
+        type: string
+        length: 255
+        nullable: true
+      logo:
+        type: string
+        length: 255
+        nullable: true
+      url:
+        type: string
+        length: 255
+        nullable: true
+      fonction:
+        type: string
+        length: 255
+      location:
+        type: string
+        length: 255
+      description:
+        type: text
+      token:
+        type: string
+        length: 255
+        unique: true
+      is_public:
+        type: boolean
+        nullable: true
+      is_activated:
+        type: boolean
+        nullable: true
+      email:
+        type: string
+        length: 255
+      created_at:
+        type: datetime
+      updated_at:
+        type: datetime
+        nullable: true 
+    manyToOne:
+      categorie:
+        targetEntity: Categorie
+        inversedBy: sites
+        joinColumn:
+          name: categorie_id
+          referencedColumnName: id
+    lifecycleCallbacks:
+      prePersist: [ setCreatedAtValue ]
+      preUpdate: [ setUpdatedAtValue ]

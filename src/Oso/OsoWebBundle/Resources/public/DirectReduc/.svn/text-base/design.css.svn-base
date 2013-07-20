@@ -1,0 +1,587 @@
+body
+ {
+	background-color: #F9FAFA;
+}
+img{border: solid 0px ;}
+
+ul{list-style-type:circle;margin-top:5px;}
+
+a:focus
+{
+outline:0;
+} 
+
+/************************/
+/*	Design de l'en-tete	*/
+/************************/
+ #haut
+	{
+		width: 1050px;
+		margin-left : 90px;
+		margin-top:5px;
+	}
+	
+#header
+{	
+	width: 1050px;
+	margin-left : 90px;
+	height: 123px;
+	padding-bottom:27px;
+	padding-top:5px;
+	background: url(images/bandFnd.jpg) repeat-x;
+	margin-bottom:1px;
+	
+}
+
+
+
+#banner
+{
+	padding-top: 20px;
+}
+
+#banner img
+{
+	width: 100%;
+	
+}
+
+
+/************************/
+/*	Design du menu     	*/
+/************************/
+
+#nav_menu
+{	
+	margin:auto;
+	width: 1050px;
+	margin-left : 90px;
+	margin-top:-3px;
+	height:50px;
+	background: url(images/nav_menu.png) repeat-x;
+	font-family:Verdana, Tahoma, sans-serif;
+	font-size:75%;	
+}
+
+#nav_menu_list
+{
+	position:absolute;
+	width:1000px;
+	margin:auto;
+	margin-left:4%;
+	padding:0;
+	list-style-type:none;
+}
+
+#nav_menu_list li
+{
+	float:left;
+	margin:0;
+	padding:0;
+	width:12%;
+}
+
+#nav_menu_list li a
+{ 
+	display: block; 
+	height: 1%; 
+	margin:0;
+	padding: 14px 5px;
+	background: url(images/nav_menu.png) repeat-x;
+	text-decoration: none;
+	color: #FFF;
+}
+
+#nav_menu_list li a:hover
+{
+	background: url(images/nav_menu_hover.png) repeat-x;
+	color : ff8c00;
+	border-left: solid 1px white;
+	border-right: solid 1px white;
+}
+/****************************/
+/*	Design des sous-menus	*/
+/****************************/
+
+#nav_menu_list li:hover .sous_menu { display: block;}
+
+#nav_menu_list .sous_menu
+{
+	list-style-type: none;
+	display: none;
+	margin:0;
+	padding:0;
+}
+#nav_menu_list .sous_menu li
+{
+	float:none;
+	width:100%;
+	font-size:75%;
+}
+
+#nav_menu_list .sous_menu li a
+{ 
+	color: #FFF;
+	background: url(images/sous_menu.png) repeat;
+	text-decoration: none;
+	padding: 8px 2px;
+	border-bottom: 1px solid black;
+	
+}
+
+#nav_menu_list .sous_menu li a:hover
+{
+	background: url(images/sous_menu_hover.png) repeat;
+		display: block; 
+}
+/************************/
+/*	Design du contenu	*/
+/************************/
+
+#contenu
+{
+	width: 1050px;
+	margin-left : 90px;
+	background-color: #dcdcdc;
+	overflow : hidden;
+}
+
+#case
+{
+	float : right;
+	width:20%;
+}
+
+#page
+{
+	float:left;
+	min-height : 1100px;
+	width: 80%;
+	background-color: #dcdcdc;
+}
+
+/*****************************/
+/* Design du menu recherche  */
+/*****************************/
+#titre
+{
+	text-align:center; 
+	width:120px; 
+	margin-left: auto;
+    margin-right: auto; 
+	text-decoration: underline;
+}
+#nav_rech
+{
+	margin-top:5px;
+	margin-left : 150px;
+	font-size: 14;
+	overflow : hidden;
+}
+
+/****************************/
+/*	Design du menu rapide	*/
+/****************************/
+
+#menu_services
+{
+	margin-top:0px;
+	margin-right : 15px;
+	float:right;
+	width:170px;
+	height: 80px;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:115px;
+	background-color:white;
+	border: solid 1px;
+	border-color:ff8c00;
+	border-top: solid 7px #006090;
+	font-family:Verdana,Arial,sans-serif;
+}
+
+#bor
+{
+	margin-left : 24px;
+	margin-top : 1.8%;
+}
+
+#menu_services_list
+{
+	list-style-type:none;
+	text-align:center;
+	margin:0;
+	margin-top:15px;
+	padding:0;
+}
+
+#menu_une
+{
+	margin-right : 15px;
+	float:right;
+	width:170px;
+	
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:115px;
+	background-color:white;
+	border: solid 1px;
+	border-color:ff8c00;
+	border-top: solid 7px #006090;
+	font-family:Verdana,Arial,sans-serif;
+}
+
+#menu_pub
+{
+	margin-right : 15px;
+	margin-bottom:20px;
+	float:right;
+	width:170px;
+	height: 190px;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:115px;
+	background-color:white;
+	border: solid 1px;
+	border-color:ff8c00;
+	border-top: solid 7px #006090;
+	font-family:Verdana,Arial,sans-serif;
+}
+
+#pub_illustrer
+{
+	
+}
+
+/****************************/
+/*	Design du pied-de-page	*/
+/****************************/
+
+#footer
+{
+	text-align:center;
+	width: 1050px;
+	margin-left : 90px;
+	margin-top : -11px;
+	margin-bottom : -13px;
+	background-color:#555; 
+	font-size:70%;
+	color:#FFF;
+}
+
+#bas
+{
+	width: 1050px;
+	margin-left : 90px;
+}
+
+
+
+
+
+#nav_rech form input, select
+{
+border:1px solid;
+margin-top:0;
+background:#F9FAFA none repeat scroll 0 0;
+color:black;
+font-family:Verdana;
+font-size:7pt;
+border-color:white;
+}
+
+#nav_rech  fieldset input
+{
+background: #006090
+
+}
+
+#nav_rech label
+{
+border:1px solid;
+margin-top:0;
+background: transparent none repeat scroll 0 0;
+color:black;
+font-family:Verdana;
+font-size:7pt;
+border-color:transparent;
+}
+
+
+em{font-style:normal;font-weight:bold;}
+
+#ann_une
+{
+	margin-top: 10px;
+}
+
+#ann_une a
+{
+	color:black;
+	text-decoration:none;
+	font-size: 12px;
+}
+
+#ann_une a:hover
+{
+	color: ff8c00;
+}
+
+#rd a
+{
+text-decoration:none;
+color: black;
+}
+#rd a:hover
+{
+color: ff8c00;
+
+}
+#test{
+display: inline;
+text-decoration:none;
+font-weight:normal;
+font-size:15;
+}
+
+
+
+/****************************/
+/*	Design des liens 			*/
+/****************************/
+
+A:link {
+text-decoration:none;
+font-weight:bold;
+display: inline;
+}
+
+A:visited {
+text-decoration:none;
+font-weight:bold;
+display: inline;
+}
+
+A:hover {
+color: black ; 
+text-decoration: underline; 
+display: inline;
+}
+
+
+
+
+
+/****************************/
+/*	Design des Annonces 		*/
+/****************************/
+body
+ {
+	
+	background-color: #F7F7F7;
+}
+
+.info{
+height:170px;
+width:100%;
+margin-left:5px;
+margin-top:25px;
+}
+
+.perso{
+position: relative;
+float: left;
+padding: 10px;
+margin-top: 8px;
+width:30%; 
+}
+
+.precision{
+float: left;
+padding: 10px;
+margin-top: 8px; 
+width:30%;
+}
+
+.coordonnee{
+position: relative;
+float: right;
+padding: 10px;
+margin-top: 8px; 
+width:30%;
+}
+
+
+
+
+
+
+
+.annonce_text{
+margin-left:25px;
+
+background: #F7F7F7;
+padding: 10px;  
+width:90%;
+margin-top: 25px; 
+}
+.avis_annonce{
+margin-left:25px;
+
+background: #F7F7F7;
+padding: 10px;  
+width:90%;
+margin-top: 25px; 
+}
+
+
+.tableau{
+position: relative; 
+float:right;
+width:25%;
+}
+
+.texte{
+position: relative; 
+clear: left;
+width:100%;
+position: relative; 
+}
+
+.photo_affiche{
+position: relative; 
+float:left;
+width:75%;
+}
+
+.field{
+background: #F7F7F7;
+}
+
+
+
+
+
+
+
+
+
+
+/****************************/
+/*	Design des boites 			*/
+/****************************/
+
+#boite_entete{
+	margin-left : 10%;
+	margin-top : 1.8%;
+height:21px;
+width:813px;
+
+}
+#boite_corps{
+margin-left : 10%;
+margin-top : 0%;
+//background-image:url(images/test.png);
+//background-repeat:no-repeat;
+
+width:745px;
+height:auto;
+background-color:rgb(83,83,83);
+}
+
+#boite_foot{
+	margin-left : 10%;
+	margin-top : 0%;
+height:21px;
+width:813px;
+}
+
+
+
+#mini_boite_entete{
+	margin-left : 5%;
+	margin-top : 1.8%;
+height:11px;
+width:270px;
+
+}
+#mini_boite_corps{
+margin-left : 5%;
+margin-top :0px;
+
+width:245px;
+background-color:rgb(83,83,83);
+}
+
+
+#mini_boite_foot{
+	margin-left : 5%;
+	margin-top : 0%;
+height:11px;
+width:270px;
+}
+
+#boite_texte {
+    position: relative;
+    height: auto;
+    width: auto;
+    left: 20px;
+	top:1px;
+	color:white;
+}
+
+
+#boite_texte A:link {
+text-decoration:none;
+font-weight:bold;
+display: inline;
+color: white;
+}
+
+#boite_texte A:visited {
+color: white;
+text-decoration:none;
+font-weight:bold;
+display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.field{
+background: #F7F7F7;
+width:90%;
+
+}
+
+table{border:0;border-collapse:collapse;border-spacing:0;margin-top:0px}
+
+#DivNewsTopLine{height:8px;background:#f3f3f3;}
+#DivNewsBox{width:610px;margin:auto;}
+
+#DivNewsList #TdTop{height:4px;font-size:1px;background:url(images/actu/list_header_top.gif) no-repeat;}
+#DivNewsList #TdBot{height:4px;font-size:1px;background:url(images/actu/list_header_bot.gif) no-repeat;}
+
+#DivNewsList{width:610px;}
+#DivNewsList th{font-size:11px;color:#3367cd;font-weight:normal;background:#d7e3ef;}
+#DivNewsList th.ThBar{background:#d7e3ef url(images/actu/icon_list_header_bar.gif) 0 6px no-repeat;}
+
+#DivNewsList th#ThNo{width:47px;}
+#DivNewsList th#ThTitle{width:397px;}
+#DivNewsList th#ThDesc{width:397px;}
+#DivNewsList th#ThDate{width:92px;}
+#DivNewsList th#ThViews{width:74px;}
+
+#DivNewsList td{height:32px;text-align:center;}
+#DivNewsList td.TdBar{background:#ffffff url(images/actu/icon_list_bar.gif) 0 12px no-repeat;}
+#DivNewsList td.TdLeftBar{text-align:left;padding-left:20px;}
+#DivNewsList td.TdDescBar{text-align:left;padding-left:20px;background:#ffffff url(images/actu/icon_list_bar.gif) 0 12px no-repeat;}
+/*#DivNewsList td.TdLeftBar a{color:#666666;text-decoration:none;}*/

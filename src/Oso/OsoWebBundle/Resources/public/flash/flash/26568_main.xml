@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+	
+		<pageGallery nameGallery="GALLERY 1" name="gallery1" line="2" maxImages="6">
+
+				<titleImages>				
+					<smallImages>_gallery_small_images_1.jpg</smallImages>
+					<bigImages>_gallery_big_images_1.jpg</bigImages>
+				</titleImages>	
+			
+			
+				<titleImages>				
+					<smallImages>_gallery_small_images_2.jpg</smallImages>
+					<bigImages>_gallery_big_images_2.jpg</bigImages>
+				</titleImages>	
+				
+				
+				<titleImages>				
+					<smallImages>_gallery_small_images_3.jpg</smallImages>
+					<bigImages>_gallery_big_images_3.jpg</bigImages>
+				</titleImages>	
+			
+			
+				<titleImages>				
+					<smallImages>_gallery_small_images_4.jpg</smallImages>
+					<bigImages>_gallery_big_images_4.jpg</bigImages>
+				</titleImages>	
+
+				
+				<titleImages>				
+					<smallImages>_gallery_small_images_5.jpg</smallImages>
+					<bigImages>_gallery_big_images_5.jpg</bigImages>
+				</titleImages>	
+
+				<titleImages>				
+					<smallImages>_gallery_small_images_6.jpg</smallImages>
+					<bigImages>_gallery_big_images_6.jpg</bigImages>
+				</titleImages>	
+				
+				<titleImages>				
+					<smallImages>_gallery_small_images_6.jpg</smallImages>
+					<bigImages>_gallery_big_images_6.jpg</bigImages>
+				</titleImages>	
+			
+			
+				<titleImages>				
+					<smallImages>_gallery_small_images_5.jpg</smallImages>
+					<bigImages>_gallery_big_images_5.jpg</bigImages>
+				</titleImages>	
+				
+				
+				<titleImages>				
+					<smallImages>_gallery_small_images_4.jpg</smallImages>
+					<bigImages>_gallery_big_images_4.jpg</bigImages>
+				</titleImages>	
+			
+			
+				<titleImages>				
+					<smallImages>_gallery_small_images_3.jpg</smallImages>
+					<bigImages>_gallery_big_images_3.jpg</bigImages>
+				</titleImages>	
+
+				
+				<titleImages>				
+					<smallImages>_gallery_small_images_2.jpg</smallImages>
+					<bigImages>_gallery_big_images_2.jpg</bigImages>
+				</titleImages>	
+
+				<titleImages>				
+					<smallImages>_gallery_small_images_1.jpg</smallImages>
+					<bigImages>_gallery_big_images_1.jpg</bigImages>
+				</titleImages>	
+								<titleImages>				
+					<smallImages>_gallery_small_images_2.jpg</smallImages>
+					<bigImages>_gallery_big_images_2.jpg</bigImages>
+				</titleImages>	
+			
+			
+				<titleImages>				
+					<smallImages>_gallery_small_images_3.jpg</smallImages>
+					<bigImages>_gallery_big_images_3.jpg</bigImages>
+				</titleImages>	
+				
+				
+				<titleImages>				
+					<smallImages>_gallery_small_images_4.jpg</smallImages>
+					<bigImages>_gallery_big_images_4.jpg</bigImages>
+				</titleImages>	
+			
+			
+				<titleImages>				
+					<smallImages>_gallery_small_images_5.jpg</smallImages>
+					<bigImages>_gallery_big_images_5.jpg</bigImages>
+				</titleImages>	
+
+				
+				<titleImages>				
+					<smallImages>_gallery_small_images_6.jpg</smallImages>
+					<bigImages>_gallery_big_images_6.jpg</bigImages>
+				</titleImages>	
+
+				<titleImages>				
+					<smallImages>_gallery_small_images_1.jpg</smallImages>
+					<bigImages>_gallery_big_images_1.jpg</bigImages>
+				</titleImages>	
+				<titleImages>				
+					<smallImages>_gallery_small_images_3.jpg</smallImages>
+					<bigImages>_gallery_big_images_3.jpg</bigImages>
+				</titleImages>	
+			
+			
+				<titleImages>				
+					<smallImages>_gallery_small_images_4.jpg</smallImages>
+					<bigImages>_gallery_big_images_4.jpg</bigImages>
+				</titleImages>	
+				
+				
+				<titleImages>				
+					<smallImages>_gallery_small_images_5.jpg</smallImages>
+					<bigImages>_gallery_big_images_5.jpg</bigImages>
+				</titleImages>	
+			
+			
+				<titleImages>				
+					<smallImages>_gallery_small_images_6.jpg</smallImages>
+					<bigImages>_gallery_big_images_6.jpg</bigImages>
+				</titleImages>	
+
+				
+				<titleImages>				
+					<smallImages>_gallery_small_images_1.jpg</smallImages>
+					<bigImages>_gallery_big_images_1.jpg</bigImages>
+				</titleImages>	
+
+				<titleImages>				
+					<smallImages>_gallery_small_images_2.jpg</smallImages>
+					<bigImages>_gallery_big_images_2.jpg</bigImages>
+				</titleImages>	
+				<titleImages>				
+					<smallImages>_gallery_small_images_4.jpg</smallImages>
+					<bigImages>_gallery_big_images_4.jpg</bigImages>
+				</titleImages>	
+			
+			
+				<titleImages>				
+					<smallImages>_gallery_small_images_3.jpg</smallImages>
+					<bigImages>_gallery_big_images_3.jpg</bigImages>
+				</titleImages>	
+				
+				
+				<titleImages>				
+					<smallImages>_gallery_small_images_1.jpg</smallImages>
+					<bigImages>_gallery_big_images_1.jpg</bigImages>
+				</titleImages>	
+			
+			
+				<titleImages>				
+					<smallImages>_gallery_small_images_2.jpg</smallImages>
+					<bigImages>_gallery_big_images_2.jpg</bigImages>
+				</titleImages>	
+
+				
+				<titleImages>				
+					<smallImages>_gallery_small_images_6.jpg</smallImages>
+					<bigImages>_gallery_big_images_6.jpg</bigImages>
+				</titleImages>	
+
+				<titleImages>				
+					<smallImages>_gallery_small_images_5.jpg</smallImages>
+					<bigImages>_gallery_big_images_5.jpg</bigImages>
+				</titleImages>	
+		</pageGallery>
+		
+		
+
+</root>

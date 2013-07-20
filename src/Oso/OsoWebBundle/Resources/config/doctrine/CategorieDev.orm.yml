@@ -1,0 +1,22 @@
+## YAML Template.
+# src/Oso/OsoWebBundle/Resources/config/doctrine/CategorieDev.orm.yml
+Oso\OsoWebBundle\Entity\CategorieDev:
+    type: entity
+    table: categorie_dev
+    id:
+      id:
+        type: integer
+        generator: { strategy: AUTO }
+    manyToOne:
+      categorie:
+        targetEntity: Categorie
+        inversedBy: categorie_devs
+        joinColumn:
+          name: categorie_id
+          referencedColumnName: id
+      dev:
+        targetEntity: Dev
+        inversedBy: categorie_devs
+        joinColumn:
+          name: dev_id
+          referencedColumnName: id

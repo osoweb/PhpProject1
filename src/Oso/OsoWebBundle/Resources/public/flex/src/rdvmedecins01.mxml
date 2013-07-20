@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!--<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+               xmlns:s="library://ns.adobe.com/flex/spark"
+               xmlns:mx="library://ns.adobe.com/flex/mx">
+	
+	<fx:Declarations>library://ns.adobe.com/flex/mx
+		Place non-visual elements (e.g., services, value objects) here
+	</fx:Declarations> backgroundColor="" backgroundAlpha="0"-->
+
+	
+ <mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute"  backgroundColor="#72809F" alpha="0.8" viewSourceURL="srcview/index.html">  
+	  
+
+	
+			
+			
+    <mx:states>
+        <mx:State name="A">
+            <mx:SetProperty target="{windowA}" name="width" value="500"/>
+            <mx:SetProperty target="{windowA}" name="height" value="300"/>
+            <mx:SetProperty target="{windowC}" name="width" value="150"/>
+            <mx:SetProperty target="{windowC}" name="height" value="150"/>
+            <mx:SetProperty target="{windowC}" name="y" value="333"/>
+            <mx:SetProperty target="{windowD}" name="x" value="373"/>
+            <mx:SetProperty target="{windowD}" name="width" value="150"/>
+            <mx:SetProperty target="{windowD}" name="height" value="150"/>
+            <mx:SetProperty target="{windowD}" name="y" value="333"/>
+            <mx:SetProperty target="{windowB}" name="x" value="23"/>
+            <mx:SetProperty target="{windowB}" name="y" value="333"/>
+            <mx:SetProperty target="{windowB}" name="width" value="150"/>
+            <mx:SetProperty target="{windowB}" name="height" value="150"/>
+            <mx:SetProperty target="{windowC}" name="x" value="200"/>
+        </mx:State>
+        <mx:State name="B">
+            <mx:SetProperty target="{windowD}" name="width" value="150"/>
+            <mx:SetProperty target="{windowD}" name="height" value="150"/>
+            <mx:SetProperty target="{windowC}" name="width" value="150"/>
+            <mx:SetProperty target="{windowC}" name="height" value="150"/>
+            <mx:SetProperty target="{windowA}" name="width" value="150"/>
+            <mx:SetProperty target="{windowA}" name="height" value="150"/>
+            <mx:SetProperty target="{windowB}" name="width" value="500"/>
+            <mx:SetProperty target="{windowB}" name="height" value="300"/>
+            <mx:SetProperty target="{windowA}" name="y" value="333"/>
+            <mx:SetProperty target="{windowC}" name="x" value="200"/>
+            <mx:SetProperty target="{windowC}" name="y" value="333"/>
+            <mx:SetProperty target="{windowB}" name="x" value="23"/>
+            <mx:SetProperty target="{windowD}" name="x" value="373"/>
+            <mx:SetProperty target="{windowD}" name="y" value="333"/>
+        </mx:State>
+        <mx:State name="C">
+            <mx:SetProperty target="{windowD}" name="width" value="150"/>
+            <mx:SetProperty target="{windowD}" name="height" value="150"/>
+            <mx:SetProperty target="{windowB}" name="width" value="150"/>
+            <mx:SetProperty target="{windowB}" name="height" value="150"/>
+            <mx:SetProperty target="{windowA}" name="width" value="150"/>
+            <mx:SetProperty target="{windowA}" name="height" value="150"/>
+            <mx:SetProperty target="{windowC}" name="width" value="500"/>
+            <mx:SetProperty target="{windowC}" name="height" value="300"/>
+            <mx:SetProperty target="{windowA}" name="y" value="333"/>
+            <mx:SetProperty target="{windowB}" name="x" value="200"/>
+            <mx:SetProperty target="{windowB}" name="y" value="333"/>
+            <mx:SetProperty target="{windowC}" name="x" value="23"/>
+            <mx:SetProperty target="{windowC}" name="y" value="19"/>
+            <mx:SetProperty target="{windowD}" name="x" value="373"/>
+            <mx:SetProperty target="{windowD}" name="y" value="333"/>
+        </mx:State>
+        <mx:State name="D">
+            <mx:SetProperty target="{windowC}" name="width" value="150"/>
+            <mx:SetProperty target="{windowC}" name="height" value="150"/>
+            <mx:SetProperty target="{windowB}" name="width" value="150"/>
+            <mx:SetProperty target="{windowB}" name="height" value="150"/>
+            <mx:SetProperty target="{windowA}" name="width" value="150"/>
+            <mx:SetProperty target="{windowA}" name="height" value="150"/>
+            <mx:SetProperty target="{windowD}" name="width" value="500"/>
+            <mx:SetProperty target="{windowD}" name="height" value="300"/>
+            <mx:SetProperty target="{windowA}" name="y" value="333"/>
+            <mx:SetProperty target="{windowB}" name="x" value="200"/>
+            <mx:SetProperty target="{windowB}" name="y" value="333"/>
+            <mx:SetProperty target="{windowD}" name="x" value="23"/>
+            <mx:SetProperty target="{windowD}" name="y" value="19"/>
+            <mx:SetProperty target="{windowC}" name="x" value="373"/>
+            <mx:SetProperty target="{windowC}" name="y" value="333"/>
+        </mx:State>
+    </mx:states>
+    
+    <mx:transitions>
+        <mx:Transition fromState="*" toState="*">
+            <mx:Parallel targets="{[windowA, windowB, windowC, windowD]}">
+                <mx:Move/>
+                <mx:Resize/>
+            </mx:Parallel>
+        </mx:Transition>
+    </mx:transitions>
+    
+    <mx:TitleWindow  verticalScrollPolicy="off" horizontalScrollPolicy="off"  id="windowA" x="23" y="19" width="250" height="200" layout="absolute" title="Fenetre A" click="currentState='A'">
+		<mx:TextArea  editable="false" width="500" height="290" >
+			<mx:htmlText><![CDATA[<b>SERVICE-1</b><br/> <p> Test L’utilisation la plus commune des states est l’ajout et la suppression de composants.</p> ]]></mx:htmlText>
+		</mx:TextArea>	
+    </mx:TitleWindow>  
+	
+    <mx:TitleWindow verticalScrollPolicy="off" horizontalScrollPolicy="off"  id="windowB" x="309" y="19" width="250" height="200" layout="absolute" title="Fenetre B" click="currentState='B'">
+    <mx:TextArea editable="false" width="500" height="290">
+			<mx:htmlText><![CDATA[<b>SERVICE-2</b><br/> <p>L’utilisation la plus commune des states est l’ajout et la suppression de composants.</p> ]]></mx:htmlText>
+		</mx:TextArea>
+	</mx:TitleWindow>
+	
+    <mx:TitleWindow verticalScrollPolicy="off" horizontalScrollPolicy="off"  id="windowC" x="23" y="260" width="250" height="200" layout="absolute" title="Fenetre C" click="currentState='C'">
+		<mx:TextArea editable="false" width="500" height="290">
+			<mx:htmlText><![CDATA[<b>SERVICE-3</b><br/> <p>L’utilisation la plus commune des states est l’ajout et la suppression de composants.</p> ]]></mx:htmlText>
+		</mx:TextArea>
+	</mx:TitleWindow>
+	
+    <mx:TitleWindow verticalScrollPolicy="off" horizontalScrollPolicy="off" id="windowD"  x="309" y="260" width="250" height="200" layout="absolute" title="Fenetre D" click="currentState='D'">
+		<mx:TextArea editable="false" width="500" height="290">
+			<mx:htmlText><![CDATA[<b>SERVICE-4</b><br/> <p>L’utilisation la plus commune des states est l’ajout et la suppression de composants.</p> ]]></mx:htmlText>
+		</mx:TextArea>
+	</mx:TitleWindow>
+        
+</mx:Application>
+	

@@ -1,0 +1,21 @@
+## YAML Template.
+# src/Oso/OsoWebBundle/Resources/config/doctrine/Categorie.orm.yml
+Oso\OsoWebBundle\Entity\Categorie:
+    type: entity
+    table: categorie
+    id:
+      id:
+        type: integer
+        generator: { strategy: AUTO }
+    fields:
+      nom:
+        type: string
+        length: 255
+        unique: true
+    oneToMany:
+      sites:
+        targetEntity: Site
+        mappedBy: categorie
+      categorie_devs:
+        targetEntity: CategorieDev
+        mappedBy: categorie

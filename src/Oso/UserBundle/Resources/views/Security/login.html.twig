@@ -1,0 +1,44 @@
+
+{% extends "OsoUserBundle::layout.html.twig" %}
+ 
+{% block body %}
+  <img src="{{ asset('bundles/osoosoweb/images/shadow-bar-centerbg.png') }}"/>   
+  <h2><span class="lef"></span><span class="righ"></span><strong></strong>CONNEXION</h2>
+     <div  align="center"> <div class='box'>    
+       <p> TEXTE EXEMPLE: LOREIM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT,SED DIAM NONUMMY NIBH EUISMOD TINCIDUNT UT LAOREET!!!DOLORE NIT AUGE DUIS DOLORE.</p>
+        <BR/>
+  {# S'il y a une erreur, on l'affiche dans un joli cadre #}
+  {% if error %}
+    <div class="alert alert-error">{{ error.message }}</div>
+  {% endif %}
+ 
+  {# Le formulaire, avec URL de soumission vers la route « login_check » comme on l'a vu #}
+  <form action="{{ path('login_check') }}" method="post" id="contacts-form">
+    <label for="username">Login :</label><BR/>
+    <input type="text" id="username" name="_username" value="{{ last_username }}" /><BR/>
+    <BR/>
+    <label for="password">Mot de passe :</label><BR/>
+    <input type="password" id="password" name="_password" /><BR/>
+    <BR/>
+    <input type="submit" value="Connexion" />
+  </form>
+ </div> </div>  
+ <img src="{{ asset('bundles/osoosoweb/images/shadow-bar-centerbg.png') }}"/>
+  <!--<div class="wrapper">
+	<p class="posted"><span>0</span>Poste   &nbsp;|&nbsp;  Dec. 11,2012</p>
+	<figure class="left marg_right1"><img src="{{ asset('bundles/osoosoweb/images/page5_img1.jpg') }}" alt=""></figure><p class="pad_bot1">
+        <span class="font1">onummy hendrerit mauris. Phasellus porta. Fusce stre potr sten maet halelu milsue pot suen.</span><br>
+	Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas sters tristique orci ac sem.<br>
+        Duis ultricies pharetra magna. Donec accumsan malesuad orci luctus a, lorem. Maecenas sters tristique orci ac sem</p>
+	
+	
+	<p><span class="font1">Aenean nonummy hendrerit mauris. Phasellus porta. Fusce.</span><br>
+	Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. </p>
+	<p><a href="#!/page_more" class="button1"><strong></strong><span>lire ...</span></a></p>
+	
+	<a href="#!/page_more" class="font1 link1"><span></span>anciens post</a>
+    </div>-->
+{% endblock %}
+ 
+ 
+      

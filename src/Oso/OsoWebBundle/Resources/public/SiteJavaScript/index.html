@@ -1,0 +1,671 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>A PROPOS</title> 
+  
+  <meta charset="utf-8"> 
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="all"/>
+  <link rel="stylesheet" href="css/grid.css" type="text/css" media="all"/>
+  <link rel="stylesheet" href="css/jquery.fancybox-1.3.4.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all"/>
+  <link rel="stylesheet" href="css/colorbox.css" type="text/css" /> 
+  <!--<link rel="stylesheet" href="css/gooeymenu.css" type="text/css" />-->
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Oswald' type='text/css'/>  
+  <link rel="stylesheet" href="shadowbox/shadowbox.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="swfobject.js"></script>
+  <script type="text/javascript" src="shadowbox/shadowbox.js"></script>
+  <script type="text/javascript">
+     Shadowbox.init({
+         language : "fr",
+         flashParams: {allowfullscreen:'true'},
+	  autostart: true
+    });
+  </script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+	<!--    GRID_7 GLISSEMENT SCRIPT 
+        <script type="text/javascript" src="js/gooeymenu.js"></script>
+  <script>gooeymenu.setup({id:'menu', selectitem:1})</script>  -->
+	<!--   END GRID_7 GLISSEMENT -->
+  <script type="text/javascript" src="js/jquery-1.6.js" ></script>
+  <script type="text/javascript" src="js/jquery-ui-1.8.11.custom.min.js"></script>
+  <script type="text/javascript" src="js/cufon-yui.js"></script>
+  <script type="text/javascript" src="js/cufon-replace.js"></script>  
+  <script type="text/javascript" src="js/Bebas_400.font.js"></script>
+  <script type="text/javascript" src="js/bgStretch.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/scroll.js"></script>
+  <script type="text/javascript" src="js/jquery.fancybox-1.3.4.js"></script>
+  <script type="text/javascript" src="js/superfish.js"></script>
+  <script type="text/javascript" src="js/content_switch.js"></script> 
+  <script type="text/javascript" src="js/jquery.mousewheel.js"></script> 
+  <script type="text/javascript" src="js/cScroll.js"></script>
+  <script type="text/javascript" src="js/jquery.bxSlider.js"></script>
+ 
+  <script type="text/javascript">
+	$(function(){
+ 	 // assign the slider to a variable
+  	var slider = $('#slider1').bxSlider({
+    	controls: false,
+	auto: true
+  	});
+
+  	// assign a click event to the external thumbnails
+ 	 $('.thumbs a').click(function(){
+  	 var thumbIndex = $('.thumbs a').index(this);
+   	 // call the "goToSlide" public function
+   	 slider.goToSlide(thumbIndex);
+ 
+   	 // remove all active classes
+   	 $('.thumbs a').removeClass('pager-active');
+   	 // assisgn "pager-active" to clicked thumb
+   	 $(this).addClass('pager-active');
+    	// very important! you must kill the links default behavior
+    	return false;
+  	});
+
+  	// assign "pager-active" class to the first thumb
+  	$('.thumbs a:first').addClass('pager-active');
+       });
+   </script>
+
+   <script type="text/javascript">
+		$(function(){
+			$('#slider2').bxSlider({				
+				mode: 'vertical',
+   			    pager: false,
+				auto: true
+			});
+		}); 
+   </script>
+
+   <script type="text/javascript">
+<!--
+function calcheight()
+{ 
+var the_iframe = document.getElementById('');
+var the_document = (the_iframe.contentWindow = the_iframe.contentDocument);
+if(the_document.document) the_document = the_document.document;
+var the_height= the_document.body.scrollHeight;} 
+//--> 
+</script>     
+
+  <!--[if lt IE 9]>
+  	<script type="text/javascript" src="js/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<div class="page_spinner"></div>
+<div id="bgStretch"><img src="images/b.png" alt=""></div>
+<div class="extra">
+	<div id="works"><div class="first"></BR></BR></BR></BR>&nbsp;&nbsp;&nbsp;&nbsp;Bienvenue sur le site: OSOWEB.FR site specialise dans les metiers de l'informatique.......</div></BR></BR>
+	
+
+	
+	<div class="wrapper"><!--<h2></strong>presentation </h2>									
+									<figure class="left marg_right1"><img src="images/conceptreseau.jpg" alt=""></figure>-->                                                             
+									<div class="box"><!--�=&eacute;--> <!--'=&acute;logo-KK.png-->   
+										<p class="font1"><B>OSOWEB.FR</B> est avant tout le site d&acuteun passionn&eacute des m&eacutetiers de  l&acuteinformatique et du web en particulier. </BR>
+                                                                       C&acuteest un site personnel qui se veut le reflet de mes comp&eacutetences  et de mon profil, 
+                                                                       c&acuteest aussi un site professionnel</BR> qui propose des services dans les domaines du d&eacuteveloppement,
+                                                                       des r&eacuteseaux, de la production et l&acuteexploitation.</BR> Ce portail est sp&eacutecialis&eacute dans la cr&eacuteation de sites internet, 
+                                                                       A travers mes divers formation, j&acute;ai &eacute;t&eacute; amener </BR>&aacute; d&eacute;velopper en C, C++, VB, JAVA, C#, PHP.
+                                                                       Que ce soit pour le d&eacute;veloppement d&acute;application en C/C++, VB ou pour le d&eacute;veloppement web avec J2E ou PHP 
+										</p>
+                                                                      <p class="font1"><B>Pourquoi PHP?</B><BR/>
+                                                                       A mes d&eacute;buts durant le stage professionnel que j&acute;ai effectu&eacute; pendant ma formation de d&eacute;veloppeur web, 
+                                                                       la technologie utilis&eacute; &eacute;tait le PHP,<BR/> j&acute;ai pu le compar&eacute; &Aacute; JAVA qui &eacute;tais le langage utilis&eacute; 
+                                                                       durant la formation, ce qui m&acute;a conduit &Aacute; choisir celui qui d&acute;apr&eacute;s moi offrait les qualit&eacute;s .......
+                                                                      </p>										
+										<a href="#!/presentation" class="button1"><strong></strong><span>suite...</span></a>                                                                  
+									</div>
+									
+	 </div>
+	 <!--  <div id="gallery">
+		<ul>
+		</ul>
+		<div class="none" id="gallery_img">            
+			<li><a  class="iframe" href="http://www.osoweb.fr/webmail" rel="shadowbox[Mixed]" title="Serveur Messagerie" ><img src="images/gals.png" alt=""><span><strong>site:   osoweb.fr</strong><span>.......,  ........</span></span></a></li>
+			<li><a  class="iframe" href="http://www.osoweb.fr/admin/index.html" rel="shadowbox[Mixed]" title="osoweb.fr" ><img src="images/gals.png" alt=""><span><strong>site:   osoweb.fr</strong><span>.......,  ........</span></span></a></li>
+			<li><a  class="iframe" href="http://www.osoweb.fr/Symfony/web/app_dev.php/" rel="shadowbox[Mixed]" title="Symfony"><img src="images/gals.png" alt=""><span><strong>site:   osoweb.fr</strong><span>Symfony,  ........</span></span></a></li>
+			<li><a  class="iframe" href="http://www.osoweb.fr/wordpress" rel="shadowbox[Mixed]" title="Wordpress" > <img src="images/gals.png" alt=""><span><strong>site:   osoweb.fr</strong><span>Wordpress,  ........</span></span></a></li>
+			<li><a  class="iframe" href="../DirectReduc/index.php" rel="shadowbox[Mixed]" title="directreduc.fr"><img src="images/gals.png" alt=""><span><strong>site:   directreduc.fr</strong><span>.......,  ........</span></span></a></li>
+			<li><a  class="iframe" href="../flash/main_v81.swf" rel="shadowbox[Mixed];width=1320;height=950" title="Flash"> <img src="images/gals.png" alt=""><span><strong>site:   osoweb.fr</strong><span>Flash,  ........</span></span></a></li>
+                    <script type="text/javascript">
+			 window.onload=function() {
+ 				 Shadowbox.setup();
+			};
+		      </script>
+		</div>		
+	    </div>-->
+	 </div>
+	
+	
+	<div class="container_24">
+		<!--<div id="icons">
+                     </div>-->
+		<div id="icons">	
+                       <ul>
+				<li class="first">suivez-nous</li>
+				<li><a href="#"><img src="images/icon1.png" alt=""></a></li>
+				<li><a href="#"><img src="images/icon2.png" alt=""></a></li>
+				<li><a href="#"><img src="images/icon3.png" alt=""></a></li>
+				<li><a href="#"><img src="images/icon4.png" alt=""></a></li> 
+                                &nbsp;&nbsp;<img src="images/banniere.png" alt="">
+		        </ul>
+                      <div class="banniere"><!--<canvas id="tuto" width="600" height="150"> Message pour les navigateurs ne supportant pas encore canvas.</canvas>--></BR></BR></BR><div class="first">&nbsp;&nbsp;&nbsp;&nbsp;Bienvenue sur le site: OSOWEB.FR site specialise dans les metiers de l'informatique.......</div></div>
+              </div>
+	
+		
+		<div class="wrapper">
+	
+			<div class="grid_6">
+				<!--header -->
+				<header>
+					<h1><a href="index.html" id="">
+				       <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="176" height="96" title="as">
+ 					 <param name="movie" value="flash/artsow.swf">
+  					 <param name="quality" value="high">
+ 					 <param name="wmode" value="transparent" />
+                                    <embed src="flash/artsow.swf" quality="high"  wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="176" height="96"></embed>
+					</object></a></h1><!--<canvas id="tuto" width="150" height="170"> Message pour les navigateurs ne supportant pas encore canvas.</canvas>-->
+                                   <!--<img src="images/logos1.png" alt="OSOWEB.FR"></br></br></br></br></br>--><!--logo-->
+					<nav class="menu">
+						<ul id="menu"><!-- class="gelbuttonmenu"-->	
+							<li><strong></strong><a href="#!/page_works" class="active" id="expand">Qui suis-je?</a></li>		                            
+							<li><strong></strong><a href="#!/presentation" id="expand1">parcours</a>
+								<!--<ul class="submenu_1">
+									<li><a href="#!/page_more">Krash-Kam</a>
+										<ul class="submenu_2">
+											<li><a href="#!/page_more">Societe</a></li>
+											<li><a href="#!/page_more"></a></li>
+											<li><a href="#!/page_more"></a></li>
+											<li><a href="#!/page_more">Press</a></li>
+										</ul>
+									</li>
+									<li><a href="#!/page_more">support</a></li>
+									<li><a href="#!/page_more">test</a></li>
+								</ul>-->
+							</li>
+							<li><strong></strong><a href="#!/page_team" id="expand1">----------</a></li>
+							<li><strong></strong><a href="#!/page_more" id="expand1">----------</a></li>
+					        <!--<li><a href="#!/page_services" id="expand1">----------</a></li>-->
+							<!--<li><a href="#!/page_contacts" id="expand1">----------</a></li>-->
+						</ul><!--menu-->				
+					</nav>
+				</header>
+				<!--header end <br/><br/>-->
+				<!--footer -->
+				<footer>
+					<span>osoweb.fr</span>  (c)   2013   &nbsp;|   <a href="#!/page_privacy" id="expand1">privacy   policy</a>
+					<!-- {%FOOTER_LINK} -->
+				</footer>
+				<!--footer end-->
+			</div>
+			<div class="grid_17 prefix_1">				                           
+                 
+				<!--content <img src="images/banniere.png" alt="">-->
+				<article id="content">
+					<ul>
+						<li id="page_works">
+						</li><!---->
+						<li id="page_about">
+							<img src="images/bg-input.png" repeat left top alt="">
+							<div class="box">
+								<div class="wrapper"><h2><span class="lef"></span><span class="righ"></span><strong></strong>presentation </h2>									
+									<figure class="left marg_right1"><img src="images/conceptreseau.jpg" alt=""></figure>                                                             
+									<div class="col1"><!--�=&eacute;--> <!--'=&acute;logo-KK.png-->   
+										<p class="font1"><B>OSOWEB.FR</B> est avant tout le site d&acuteun passionn&eacute des m&eacutetiers de  l&acuteinformatique et du web en particulier. 
+                                                                       C&acuteest un site personnel qui se veut le reflet de mes comp&eacutetences  et de mon profil, 
+                                                                       c&acuteest aussi un site professionnel qui propose des services dans les domaines du d&eacuteveloppement,
+                                                                       des r&eacuteseaux, de la production et l&acuteexploitation. Ce portail est sp&eacutecialis&eacute dans la cr&eacuteation de sites internet, 
+                                                                       A travers mes divers formation, j&acute;ai &eacute;t&eacute; amener &aacute; d&eacute;velopper en C, C++, VB, JAVA, C#, PHP.
+                                                                       Que ce soit pour le d&eacute;veloppement d&acute;application en C/C++, VB ou pour le d&eacute;veloppement web avec J2E ou PHP 
+										</p>
+                                                                      <p class="font1"><B>Pourquoi PHP?</B><BR/>
+                                                                       A mes d&eacute;buts durant le stage professionnel que j&acute;ai effectu&eacute; pendant ma formation de d&eacute;veloppeur web, 
+                                                                       la technologie utilis&eacute; &eacute;tait le PHP, j&acute;ai pu le compar&eacute; &Aacute; JAVA qui &eacute;tais le langage utilis&eacute; 
+                                                                       durant la formation, ce qui m&acute;a conduit &Aacute; choisir celui qui d&acute;apr&eacute;s moi offrait les qualit&eacute;s .......
+                                                                      </p>										
+										<a href="#!/presentation" class="button1"><strong></strong><span>suite...</span></a>                                                                  
+									</div>
+									
+								</div>
+							</div>
+						</li>
+						<li id="page_team">
+							<img src="images/bg-input.png" repeat left top alt="">
+							<div class="box">
+								<div class="wrapper">
+									<h2><strong></strong>Technologie</h2>
+									<div class="wrapper">
+									  <div class="thumbs">
+										<a href="#" class="box1 marg_right1">
+											<strong></strong>
+											<span>
+												<img src="images/" alt="">
+												<span class="font1">site</span>
+												G.
+											</span>
+										</a>
+										<a href="#" class="box1 marg_right1">
+											<strong></strong>
+											<span>
+												<img src="images/" alt="">
+												<span class="font1">site</span>
+												R.
+											</span>
+										</a>
+										<a href="#" class="box1 marg_right1">
+											<strong></strong>
+											<span>
+												<img src="images/" alt="">
+												<span class="font1">site</span>
+												X.
+											</span>
+										</a>
+										<a href="#" class="box1">
+											<strong></strong>
+											<span>
+												<img src="images/" alt="">
+												<span class="font1">site</span>
+												O.
+											</span>
+										</a>
+                                                                 </div>
+									</div>
+									<div  id="slider1">
+                                                                <div><img src="http://24.media.tumblr.com/tumblr_m57gldYca81r46py4o1_500.jpg" height="250" width="600"/></div>
+		                                                  <div><img src="http://24.media.tumblr.com/tumblr_m57gldYca81r46py4o1_500.jpg" height="240" width="600"/></div>
+		                                                  <div><img src="http://24.media.tumblr.com/tumblr_m57gldYca81r46py4o1_500.jpg" height="230" width="600"/></div>
+		                                                  <div><img src="http://24.media.tumblr.com/tumblr_m57gldYca81r46py4o1_500.jpg" height="220" width="600"/></div>
+                                                               </div>      
+									<!--<div class="wrapper">
+                                                                      <a href="#!/page_more" class="box1 marg_right1">
+											<strong></strong>
+											<span>
+												<img src="images/page3_img5.jpg" alt="">
+												<span class="font1">Praesent vesti</span>
+												Sadok.
+											</span>
+										</a>
+										<a href="#!/page_more" class="box1 marg_right1">
+											<strong></strong>
+											<span>
+												<img src="images/page3_img6.jpg" alt="">
+												<span class="font1">Webmaster</span>
+												Fu.
+											</span>
+										</a>
+									</div>-->
+								</div>
+							</div>
+						</li>
+						<li id="page_services">
+							<img src="images/bg-input.png" repeat left top alt="">
+							<div class="box">
+								<div class="wrapper">
+									<h2><strong></strong>--------------</h2>
+									<p><span class="font1">Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. </span><br>
+											Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas ster tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan males uada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris ferm.</p>
+									<div class="wrapper">
+										<div class="col1">
+											<div class="wrapper">
+												<figure class="left marg_right1"><img src="images/page4_img1.png" alt=""></figure>
+												<p class="pad_bot1"><a href="#!/page_more" class="font1 link1"><span></span>Etude et D&eacuteveloppement.</a><br>
+														Fusce feugiat malesuada odioe. Morbi nunc odio, gravid/</p>
+											</div>
+											<div class="wrapper">
+												<figure class="left marg_right1"><img src="images/page4_img2.png" alt=""></figure>
+												<p class="pad_bot1"><a href="#!/page_more" class="font1 link1"><span></span>Syst&egravemes et R&eacuteseaux.</a><br>
+                                                                                                  Ferugiat malesuada odioe. Morbi nunc odio, gravid sterse/</p>
+											</div>
+											
+										</div>
+										<div class="col2 pad_left1">
+											<div class="wrapper">
+												<figure class="left marg_right1"><img src="images/page4_img4.png" alt=""></figure>
+												<p class="pad_bot1"><a href="#!/page_more" class="font1 link1"><span></span>Production et Exploitation.</a><br>
+														Fusce feugiat malesuada odioe. Morbi nunc odio, gravid/</p>
+											</div>
+											<div class="wrapper">
+												<figure class="left marg_right1"><img src="images/page4_img3.png" alt=""></figure>
+												<p><a href="#!/page_more" class="font1 link1"><span></span>Assisstance Utilisateurs.</a><br>
+														Ferugiat malesuada odioe. Morbi nunc odio, gravid sterse/</p>
+											</div>
+											<!--<div class="wrapper">
+												<figure class="left marg_right1"><img src="images/page4_img5.png" alt=""></figure>
+												<p><a href="#!/page_more" class="font1 link1"><span></span>Divers.</a><br>
+														Fusce feugiat malesuada odioe. Morbi nunc odio, gravid/</p>
+											</div>-->
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li id="page_projet">
+							<img src="images/bg-input.png" repeat left top alt="">
+							<div class="box">
+								<div class="wrapper">
+							<div class="relative">
+										<div class="scroll">      
+				<h2><strong></strong>------------------------ </h2>	 	
+		 						
+<form method="post" action="traitement.php">
+ 
+   <fieldset>
+       <legend>---------------------------</legend> <br/><!-- Titre du fieldset --> 
+        
+	   <div>
+    <input type="text" name="Nom" id="Nom" onFocus="if(this.value=='Nom:'){this.value=''}" 
+	onblur= "if(this.value==''){this.value='Nom:'}"/> &nbsp;&nbsp;&nbsp;&nbsp;
+	<select  style="width:inherit"name="state" size="1">
+          <option selected="selected">Type de stucture &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</option>
+      
+          <option>---------- </option>
+          <option>Association </option>
+          <option>Particulier </option>
+          <option>Entreprise </option>    
+        </select><span > </span>
+	   </div><br/>
+
+       <div>
+         <input type="text" name="Contact" id="Contact" onFocus="if(this.value=='Contact:'){this.value=''}" 
+		onblur= "if(this.value==''){this.value='Contact:'}"/> &nbsp;&nbsp;&nbsp;&nbsp;
+	 	<input type="text" name="Phone" id="Phone" onFocus="if(this.value=='Phone:'){this.value=''}" 
+		onblur= "if(this.value==''){this.value='Phone:'}"/>&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="email" name="email" id="email" onFocus="if(this.value=='email:'){this.value=''}" 
+	onblur= "if(this.value==''){this.value='email:'}"/>
+	   </div><br/>
+ 
+       <div>
+       <legend>SUPPORT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DUREE</legend> 
+           <input type="radio" name="support" value="usb" id="usb" /> <label>usb </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		   <input type="radio" name="durée" value="3min" id="3min" /> <label>- 3min </label></br>
+           <input type="radio" name="support" value="dvd" id="dvd" /> <label>dvd </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		   <input type="radio" name="durée" value="5min" id="5min" /> <label>- 5min </label></br>
+           <input type="radio" name="support" value="siteweb" id="siteweb" /> <label>site web </label>&nbsp;&nbsp;&nbsp;&nbsp;     	   
+		   <input type="radio" name="durée" value="51min" id="51min" /> <label>entre 5 et 10min </label></br>
+           <input type="radio" name="support" value="autre" id="autre" /> <label>Autre...</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		   <input type="radio" name="durée" value="10min" id="10min" /> <label>10min et plus</label></br>
+	   </div><br/>
+      <!--<div>
+      
+       <legend>Support</legend> 
+           <input type="radio" name="souhait" value="usb" id="usb" /> <label for="usb">usb </label></br>
+           <input type="radio" name="souhait" value="dvd" id="dvd" /> <label for="dvd">dvd </label></br>
+           <input type="radio" name="souhait" value="siteweb" id="siteweb" /> <label for="siteweb">site web </label></br>
+           <input type="radio" name="souhait" value="autre" id="autre" /> <label for="autre">Autre...</label>
+		 </div><br/>-->
+       <p>
+           <textarea name="precisions" id="precisions" cols="40" rows="4" onFocus="if(this.value=='precisions:'){this.value=''}" 
+	onblur= "if(this.value==''){this.value='Veuillez préciser votre projet :'}"></textarea>
+       </p>
+   </fieldset>
+</form>
+
+             <!--<div><br />
+			<textarea cols="15" rows="5" onfocus="if(this.value=='Message:'){this.value=''}" onblur="if(this.value==''){this.value='Message:'}">Message:</textarea>
+		</div>-->
+                <a href="#" onClick="document.getElementById('contacts-form').reset()"><span><em>clear</em></span></a>&nbsp;&nbsp;<a href="#"   onclick="document.getElementById('contacts-form').submit()"><span><em>envoi</em></span></a>
+           	 	
+									</div>
+							      </div>	
+								</div>
+							</div>						
+						</li>
+						<li id="page_contacts">
+							<img src="images/bg-input.png" repeat left top alt="">
+							<div class="box">
+								<div class="wrapper">
+									<div class="wrapper">
+										<figure class="left marg_right1" id="map"></figure>
+										<div class="col1">
+											<h2><strong></strong>contact  info  </h2>
+											<p class="font1">Osoweb.fr<br>
+													*****************,<br>
+													******************.</p>
+											<p><span class="col2">Portable:</span>  +1 000 000 0000<br>
+													<span class="col2">Telephone:</span>   +1 000 000 0000<br>
+													<span class="col2">FAX:</span>               +1 000 000 0000 <br>
+													E-mail: <a href="mailto:" class="link1"><span></span>contact@osoweb.fr</a></p>
+											<p class="font1">Osoweb.fr.<br>
+													Allee du forum, <br>
+													92 100, Boulogne-Billancourt. </p>
+											<p><span class="col2">Portable:</span>  +1 000 000 0000<br>
+													<span class="col2">Telephone:</span>   +1 000 000 0000<br>
+													<span class="col2">FAX:</span>               +1 000 000 0000 <br>
+													E-mail: <a href="mailto:" class="link1"><span></span>contact@osoweb.fr</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li id="page_privacy">
+							<img src="images/bg-input.png" repeat left top alt="">
+							<div class="box">
+								<div class="wrapper">
+									<h2></span><strong></strong>privacy policy  </h2>
+									<p><span class="font1">vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta ster posrte.</span> <br>
+											Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas ster tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan males uada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris ferm. Etum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus.</p>
+									<p><span class="font1">um molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta ster posrte lorense. </span><br>
+											Esmalesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas ster tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan males uada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris ferm. Etum dictum magna.</p>
+									<p><span class="font1">vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta ster posrte.</span> <br>
+											Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas ster tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan males uada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris ferm. </p>
+									<p><a href="mailto:" class="link1"><span></span>privacy@demolink.org</a></p>
+								</div>
+							</div>
+						</li>
+						<li id="page_more">
+							<img src="images/bg-input.png" repeat left top alt="">
+							<div class="box">
+								<div class="wrapper">
+									<h2><strong></strong>Lorem ipsum </h2>
+									<div class="relative">
+										<div class="scroll">
+											<p><span class="font1">Aenean nonummy hendrerit mauris. Phasellus porta ster posrte.</span> <br>
+													Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas ster tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan males uada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris ferm. Duis ultricies pharetra magna. Donec accumsan males uada orci. Donec sit amet eros. Mauris ferm. Etum dictum magna. </p>
+											<p><span class="font1">Morbi nonummy hendrerit mauris. Phasellus porta ster posrte.</span> <br>
+													Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas ster tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan males uada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris ferm. Etum dictum magna.</p>
+											<p><span class="font1">Mauris nunc odio hendrerit mauris. Phasellus porta ster posrte lorense. </span><br>
+													Esmalesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas ster tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan males uada orci. Donec sit amet eros. </p>
+											<p><span class="font1">Etum  hendrerit mauris. Phasellus porta ster posrte lorense. </span><br>
+													Esmalesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas ster tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan males uada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris ferm. Etum dictum magna.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+                                          <li id="page_more1">
+							<img src="images/bg-input.png" repeat left top alt="">
+							<div class="box">
+								<div class="wrapper">
+									<h2></span><strong></strong>Lorem ipsum1 </h2>
+									<div class="relative">
+										<div class="scroll">
+											<p><span class="font1">Aenean nonummy hendrerit mauris. Phasellus porta ster posrte.</span> <br>
+													Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas ster tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan males uada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris ferm. Duis ultricies pharetra magna. Donec accumsan males uada orci. Donec sit amet eros. Mauris ferm. Etum dictum magna. </p>
+											<p><span class="font1">Morbi nonummy hendrerit mauris. Phasellus porta ster posrte.</span> <br>
+													Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas ster tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan males uada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris ferm. Etum dictum magna.</p>
+											<p><span class="font1">Mauris nunc odio hendrerit mauris. Phasellus porta ster posrte lorense. </span><br>
+													Esmalesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas ster tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan males uada orci. Donec sit amet eros. </p>
+											<p><span class="font1">Etum  hendrerit mauris. Phasellus porta ster posrte lorense. </span><br>
+													Esmalesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas ster tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan males uada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris ferm. Etum dictum magna.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+                                          <li id="presentation">
+							<img src="images/bg-input.png" repeat left top alt="">
+							<div class="box">
+								<div class="wrapper">
+									<h2><strong></strong>Parcours </h2>
+									<div class="relative">
+										<div class="scroll">
+                                                                             <p class="font1"> 
+											Issue d&acute;une formation technique, 
+                                                                             j&acute;ai toujours &eacute;t&eacute; attir&eacute; par les nouvelles technologies.
+                                                                             L&acute;envie, le besoin d&acute;&eacute;volution m&acute;on pousser &agrave; me former dans les diff&eacute;rents m&eacute;tiers de l&acute;informatique.
+										       <br/> 
+                                                                             Mon parcours fait de moi un professionnel polyvalent correspondant aux exigences requises dans le monde du travail. Avoir la possibilit&eacute; de travailler dans divers secteurs d&acute;activit&eacute;, ou d&acute;exercer une activit&eacute; professionnelle &agrave; responsabilit&eacute;s, est pour moi un atout int&eacute;ressant qui r&eacute;pondra ainsi totalement &agrave; mes go&ucirc;ts et mes projets. </p> 
+                                                                            
+											<p><span class="font1">Concepteur Developpeur Informatique.</span> <br>
+                                                                                                    -<br>
+														  -
+											<p><span class="font1">Technicien Superieur en Automatisme Informatique Industrielle .</span> <br>
+													         -<br>
+														  -
+											<p><span class="font1">Cursus MICROSOFT CS Administrateur  option messagerie <I>Exchange</I>. </span><br>
+													         -<br>
+														  -
+											<p><span class="font1"><B>Baccalaur&Eacute;at</B> sciences et techniques industrielles en g&Eacute;nie &Eacute;lectrique. </span><br>
+													         -<br>
+														  -
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+                                          <li id="page_blog">
+							<img src="images/bg-input.png" repeat left top alt="">
+							<div class="box">
+								<div class="wrapper">
+									<h2><strong></strong>blog </h2>
+									<span class="font1">XHTML &amp; CSS Development</span>
+									<p class="posted"><span>0</span>Poste   &nbsp;|&nbsp;  Dec. 11,2012</p>
+									<p class="pad_bot1"><span class="font1">onummy hendrerit mauris. Phasellus porta. Fusce stre potr sten maet halelu milsue pot suen.</span><br>
+											Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas sters tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuad orci. </p>
+									<div class="wrapper">
+										<figure class="left marg_right1"><img src="images/page5_img1.jpg" alt=""></figure>
+										<p><span class="font1">Aenean nonummy hendrerit mauris. Phasellus porta. Fusce.</span><br>
+												Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. </p>
+										<p><a href="#!/page_more" class="button1"><strong></strong><span>lire ...</span></a></p>
+									</div>
+									<a href="#!/page_more" class="font1 link1"><span></span>anciens post</a>
+								</div>
+							</div>
+						</li>
+						<li id="page_about1">
+							<img src="images/bg-input.png" repeat left top alt="">
+							<div class="box">
+								<div class="wrapper">
+									<figure class="left marg_right1"><img src="" alt=""></figure>
+									<div class="col1">
+										<h2><span class="left"></span><span class="right"></span>
+										<strong></strong>Parlez nous de vos projet</h2>
+										<p class="font1">Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. </p>
+										<p class="pad_bot1">Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus.</p>
+										<a href="#!/page_more" class="button1"><strong></strong><span>plus d'info</span></a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+                              <div class="footer2">
+				    <br/><br/><br/>
+                                 <h2>
+                                  <a href="#!/page_more">|&nbsp;&nbsp;osoweb     </a> &nbsp;|&nbsp;<a href="#!/page_more">&nbsp;osoweb      </a>&nbsp;|&nbsp;<a href="#!/page_more">&nbsp;osoweb      </a>&nbsp;|&nbsp;<a href="#!/page_more" >&nbsp;osoweb      </a>&nbsp;|&nbsp;<a href="#!/page_more" >&nbsp;osoweb      </a>&nbsp;&nbsp;|
+                                  <!--<a href="#!/page_more" id="expand1">|&nbsp;osoweb     </a> &nbsp;|&nbsp;<a href="#!/page_more" id="expand1">osoweb      </a>&nbsp;|&nbsp;<a href="#!/page_more" id="expand1">osoweb      </a>&nbsp;|&nbsp;<a href="#!/page_more" id="expand1">osoweb      </a>&nbsp;|&nbsp;<a href="#!/page_more" id="expand1">osoweb      </a>&nbsp;| 
+                                --></h2>
+                                
+                              </div>         
+				</article>
+                            
+				<!--content end-->
+			</div><!--&nbsp;&nbsp;<img src="images/shadow-bar-right4.png" alt="">style="opacity: 1; display: block;"
+          <img id="fleche" src=aller.jpg onMouseover=this.src=magip; onMouseout=this.src=magi; onclick=mng()>
+             id="mgauche" style='position:absolute;top:50px;left:-150px;z-Index:10'-->
+		<div class="grid_7" >
+               <div class="box" >  
+                <div id="slider2">
+		  <div><img src="images/banzai-150x150.jpg" align="left"/> 
+                   <p>consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tationullamcorper .</p></div>
+		  <div><img src="images/vector-150x150.jpg" align="left"/>  
+                   <p>consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tationullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.delenit augue duis dolore te feugait nulla facilisi. eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi </p></div>
+		  <div><img src="images/banzai-150x150.jpg" align="left"/>  
+                   <p>consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tationullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.delenit augue duis dolore te feugait nulla facilisi. eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi </p></div>
+		  <div><img src="images/vector-150x150.jpg" align="left"/>  
+                   <p>consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tationullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. delenit augue duis dolore te feugait nulla facilisi. eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi</p></div>
+		  </div><!-- slider2 -->
+	        </div><!-- box -->
+              &nbsp;&nbsp;<img src="images/bg_footer2.png" alt="">
+	        <div class="box">
+                <h2>blog</h2>
+			<p class="font1">Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui.</p> 
+                     <a href="#!/page_blog" class="button1"><strong></strong><span>suite</span></a>
+	        </div><!-- box -->
+              </div><!-- grid_7 -->
+	      
+          <!----><div class="rightcol"></div>
+		            <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->     
+	   </div>
+	</div>
+</div>
+
+
+<script type="text/javascript"> Cufon.now(); </script>
+<script>
+$(window).load(function() {	
+	$('.page_spinner').fadeOut();
+        $('body').css({overflow:'visible'})
+	 $(".grid_7").fadeOut();$(".footer2").fadeOut();
+       /* if ($("#gallery").css("display", 'visible')){
+              
+       }else{
+              $(".grid_7").fadeIn("slow");
+         if ($("#gallery").is(":hidden"))
+                .css("display", "visible").fadeIn("slow")
+              //$("#gallery").slideUp();$(".grid_7").show("slow");
+          }
+	$('ul#menu li span span strong a').click(function () {
+          $(".grid_7").css("display", "visible")
+       });*/
+})
+</script>
+<script>
+           /**/ $('a#expand').click(function() {
+                $(".grid_7").fadeOut();
+                $(".footer2").fadeOut();
+           } );
+                
+		   $('a.button1').click(function() {
+                $(".footer2").fadeIn("slow");
+                $(".grid_7").fadeIn("slow");
+           } );
+		   
+           $('a#expand1').click(function() {
+                $(".grid_7").fadeIn("slow");
+                $(".footer2").fadeIn("slow");
+           } );
+ </script>
+<!--coded by koma-->
+<script language="javascript">
+      var canvas = document.getElementById('tuto');
+      var ctx = canvas.getContext('2d');
+     
+      //Ajout de plusieurs courbes
+		var numberOfLines = 5;
+		var i = 0;
+		var cycle = function() {
+		ctx.clearRect(0,0,canvas.width,canvas.height);
+		for(var j=0; j<numberOfLines; ++j) {
+		var offset = (i+j*10)/20;
+		ctx.lineWidth = 1+2*(numberOfLines-j); // �paisseur variable en fonction de la ligne
+		ctx.strokeStyle = 'rgba(80,150,240,'+(j/5+0.1)+')'; // opacit� variable en fonction de la ligne
+		var y = (Math.sin(offset)+1)*canvas.height/2;
+		var cpy1 = (Math.cos(offset)+0.5)*canvas.height;
+		var cpy2 = canvas.height - cpy1;
+		ctx.beginPath();
+		ctx.moveTo(0, y);
+		ctx.bezierCurveTo(canvas.width/3, cpy1, 2*canvas.width/3, cpy2, canvas.width, y);
+		ctx.stroke();
+		}
+		i++;
+		};
+		setInterval(cycle, 30);
+     </script>
+</body>
+</html>

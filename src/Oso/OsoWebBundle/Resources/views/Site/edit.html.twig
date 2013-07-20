@@ -1,0 +1,74 @@
+{% extends "OsoUserBundle::layout.html.twig" %}
+{% block title %}
+    OSOWEB
+    - SITE
+{% endblock %}
+{% block body -%}
+    <img src="{{ asset('bundles/osoosoweb/images/shadow-bar-centerbg.png') }}"/>
+     <h2><span class="lef"></span><span class="righ"></span><strong></strong>EDIT SITE</h2>           
+    <div><div style='width:1086px;'> <div class='box'>
+
+    <form action="{{ path('oso_site_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+        <input type="hidden" name="_method" value="PUT" />
+        {{ form_widget(edit_form) }}
+        <p>
+            <button type="submit">Edit</button>
+        </p>
+    </form>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('oso_site') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('oso_site_delete', { 'id': entity.id }) }}" method="post">
+            <input type="hidden" name="_method" value="DELETE" />
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
+</div> </div></div>
+<img src="{{ asset('bundles/osoosoweb/images/shadow-bar-centerbg.png') }}"/>
+{% block footer %}
+{% endblock %}
+    {% endblock %}
+
+{% block stylesheets %}
+      <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/osoweb.css') }}" type="text/css" />
+     <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/shadowbox.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/reset.css') }}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/grid.css') }}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/jquery.fancybox-1.3.4.css') }}" type="text/css" media="screen"/>   
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/style.css') }}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{{ asset('bundles/osoosoweb/css/colorbox.css') }}" type="text/css" />
+    <link rel='stylesheet' href="{{ asset('http://fonts.googleapis.com/css?family=Oswald') }}" type='text/css'/>
+<!-- Design for nicer paging -->
+	<style type="text/css">
+         .box{
+             margin: 0 -116px 0px 5px;
+          }       
+          div.wrapper1{
+          width: 572px; float: left;
+          }
+          div.wrapper2{
+          width: 572px; float: right;
+          }
+	</style>
+        
+        <style type="text/css">
+       /* */ .success { text-align: center; padding: 10px; background: #DFF2BF; border: 1px solid; color: #4F8A10; margin-bottom: 10px; }
+form { font-size: 16px; }
+form div { clear: left; margin-bottom: 10px; }
+form label { float: left; margin-right: 0px; text-align: left; width: 100px; font-weight: bold; vertical-align: top; padding-top: 10px; }
+form input[type="text"],
+form input[type="email"]
+    { width: 350px; line-height: 26px; font-size: 20px; min-height: 26px; }
+form textarea { width: 350px; height: 170px; line-height: 26px; font-size: 20px; }
+form input[type="submit"] { margin-left: 4px; width: 358px; line-height: 26px; font-size: 20px; min-height: 26px; }
+form ul li { color: #ff0000; margin-bottom: 5px; }
+           
+        </style>
+{% endblock %}

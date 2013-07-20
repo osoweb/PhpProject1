@@ -1,0 +1,409 @@
+<?PHP 
+
+	$rechecheEffec = false; // booléen permetant de savoir si il faut faire une recherche.
+	//la valeur par défaut est false dans le cas où l'un des champs du formulaire est existant, on effectue la recherche donc 
+	// on attribue la valeur true.
+	
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+	
+	//récupération des valeurs envoyer par méthode POST sinon dans le cas où elles sont inexistantes, on leurs attribue une valeur par défaut.
+	
+	if (isset($_POST['mot'] )) //le mot-clés
+	{
+		$mot_cle = htmlentities($_POST['mot']);
+		if($mot_cle != "")
+		{
+			$rechecheEffec = true; 
+		}
+	}
+	
+	if (isset($_POST['photo'] )) // la variable pour savoir si il faut au moin une photo
+	{
+		$photo = $_POST['photo'];
+		$rechecheEffec = true; 
+	}
+	else
+	{
+		$photo = 0;
+	}
+	
+	if (isset($_POST['typeAnnonce'] )) // le type d'annonce une offre ou une demande
+	{
+		$type_ann = $_POST['typeAnnonce'];
+		$rechecheEffec = true; 
+	}
+	else
+	{
+		$type_ann = 0;
+	}
+	
+	if (isset($_POST['type_produit'])) // la catégorie du produit cherché
+	{
+		$type_prod = $_POST['type_produit'];
+		$rechecheEffec = true; 
+	}
+	else
+	{
+		$type_prod ='';
+	}
+	
+	if (isset($_POST['date'])) // la fraîcheur des annonces.
+	{
+		$fraicheur = $_POST['date'];
+		$rechecheEffec = true; 
+		
+	}
+	else
+	{
+		$fraicheur = 0;
+	}
+	// ensuite, on attribue une date butoire pour savoir la période à laquelle l'annonce est valide 
+	include ('fonctions/date.php');
+	$d = new Date ();
+	if ( $fraicheur != 0)
+	{
+		if ( $fraicheur == 3)
+		{
+			$date = $d->aujourdhui();
+		}
+		else if ($fraicheur == 2)
+		{	
+			$date = $d->semaine_prec();
+		}
+		else
+		{
+			$date = $d->mois_prec();
+		}
+	}
+	
+	if(isset($_POST['vendeur'])) // le type de vendeur pro ou particulier
+	{
+		$type_vend = $_POST['vendeur'];
+		$rechecheEffec = true; 
+	}
+	else
+	{
+		$type_vend =	0;
+	}
+	
+	if(isset($_POST['prixmin'])) // le prix minimum possible
+	{
+		if( $_POST['prixmin'] != '')
+		{
+			$prix_min = $_POST['prixmin'];
+			$rechecheEffec = true; 
+		}
+		else
+		{
+			$prix_min = 0;
+		}
+	}
+	else
+	{
+			$prix_min = 0;
+	}
+	
+	if (isset($_POST['prixmax'])) // le prix maximum possible
+	{
+		if( $_POST['prixmax'] != '')
+		{
+			$prix_max = $_POST['prixmax'];
+			$rechecheEffec = true; 
+		}
+		else
+		{
+			$prix_max = 0;
+		}
+	}
+	else
+	{
+			$prix_max = 0;
+	}
+	
+	if(isset($_POST['regi'])) // la région
+	{
+		$region = $_POST['regi'];
+		$rechecheEffec = true; 
+	}
+	else
+	{
+		$region=99;
+	}
+	
+	if (isset($_POST['depart'])) // le département
+	{
+		$departement = $_POST['depart'];
+		$rechecheEffec = true; 
+	}
+	else 
+	{
+		$departement = 0;
+	}
+	
+	if (isset($_POST['ville'])) //la ville
+	{
+		$ville = $_POST['ville'];
+		$rechecheEffec = true; 
+	}
+	else 
+	{
+		$ville = 0;
+	}	
+	
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+	
+	
+	//une fois les valeurs toutes récupérer on regard si on doit faire une recherche ou pas grâce à la variable $rechecheEffec
+	if ($rechecheEffec)
+	{ 	
+		// Si il y a une recherche à faire, on vérifie la validité des champs du formulaires
+		$verif = true;
+		$pattern = '`^[[:digit:]]+$`';
+	
+		if (!preg_match($pattern, $prix_min )) //le prix max
+		{
+			$verif = false;
+			echo "le champ prix minimum n'accepte que des chiffres";
+		}
+		if (!preg_match($pattern, $prix_max )) // et mini
+		{
+			$verif = false;
+			echo "le champ prix maximum n'accepte que des chiffres";
+		}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+			
+		if ($verif)
+		{
+			// Dans le cas, où les données sont du bon format
+			// on écrit la requete pour récupérer les offres qui respecte les conditions :
+			
+			$req4='SELECT * FROM `offres`';
+			
+			// a modifier pour distingué les annonces en cours de supression.
+			$req4=  $req4.'WHERE `OFFRE_ID` = `OFFRE_ID` '; // condition toujours vrai afin d'éviter le 'where' dans les conditions ci-dessous.
+ 
+			if ($mot_cle != '' ) //si l'utilisateur a mis un mot clés.
+			{
+				$req4=  $req4." AND (`OFFRE_TITRE` LIKE '%".ucfirst($mot_cle)."%' OR `OFFRE_TEXTE` LIKE '%".ucfirst($mot_cle)."%' OR `OFFRE_TITRE` LIKE '%".strtoupper($mot_cle)."%' OR `OFFRE_TEXTE` LIKE '%".strtoupper($mot_cle)."%' OR `OFFRE_TITRE` LIKE '%".mb_strtolower($mot_cle)."%' OR `OFFRE_TEXTE` LIKE '%".mb_strtolower($mot_cle)."%' ) "; // on selectionne les annonces comportant le mot ou la phrase qu'il a tapé.
+			}
+ 
+			
+			if ($type_prod != 0) // si l'utilisateur a sprécifié un domaine particulier.
+			{
+ 
+				if($type_prod < 10)  // dans le cas où c'est type d'offre (ex: multimédia).
+				{
+					$req4=  $req4." AND `OFFRE_TYPE` IN ( SELECT TYPE_SS_OFFRE_ID FROM `type_ss_offre` WHERE TYPE_OFFRE_ID = ".$type_prod.") ";
+				}
+	
+				else // dans le cas où c'est un sous-type (ex: console vidéo).
+				{
+					$req4=  $req4."  AND  `OFFRE_TYPE` = ".$type_prod;
+				}
+			}
+			
+			// localisation de l'offre
+			if($ville == 0) // cas l'utilisateur n'a pas spécifier de ville alors
+			{
+				if( $departement == 0) // on teste si il précisé un département sinon
+				{
+					if($region != 99) // une region
+					{
+						$req4=  $req4." AND `UTIL_ID` IN ( SELECT UTIL_ID FROM `utilisateur` WHERE `ID_VILLE` IN (SELECT `ID_VILLE` FROM ville WHERE ID_DEPT IN ( SELECT ID_DEPT FROM departement WHERE ID_REG =".$region." ) ) )";
+					}	
+				}
+				else
+				{
+					$req4=  $req4." AND `UTIL_ID` IN ( SELECT `UTIL_ID` FROM `utilisateur` WHERE `ID_VILLE` IN (SELECT ID_VILLE FROM ville WHERE ID_DEPT = ".$departement." ) )";
+				}
+			}
+			else
+			{
+				$req4=  $req4." AND UTIL_ID IN ( SELECT UTIL_ID FROM `utilisateur` WHERE ID_VILLE = ".$ville." )";
+			}
+			
+			// si l'utilisateur veut qu'il ait au moin une photo
+			if ($photo == 1)
+			{
+				$req4=  $req4." AND OFFRE_PHOTO != '' ";
+			}
+			
+			// type de l'annonce
+			if ($type_ann != 0)
+			{
+						$req4=  $req4." AND OFFRE_DEMANDE =".$type_ann;
+			}
+			
+			// type de vendeur 
+			if ( $type_vend != 0)
+			{
+				$req4=  $req4." AND UTIL_ID IN ( SELECT UTIL_ID FROM `utilisateur` WHERE UTIL_TYPE = ".$type_vend." )";
+			}
+			
+			// prix
+			if ( $prix_min != 0 && $prix_max != 0 )
+			{
+				$req4=  $req4." AND OFFRE_PRIX BETWEEN ".$prix_min." AND ".$prix_max;
+			}
+			else
+			{
+				if ( $prix_min != 0 )
+				{
+					$req4=  $req4." AND OFFRE_PRIX >= ".$prix_min;
+				}
+				if ($prix_max != 0)
+				{
+					$req4=  $req4." AND OFFRE_PRIX <= ".$prix_max;
+				}				
+			}
+			//date 
+			if ($fraicheur != 0)
+			{
+				if ($fraicheur == 3)
+				{
+					$req4=  $req4." AND OFFRE_DATE = ".$date;
+				}
+				else
+				{
+					$req4=  $req4." AND OFFRE_DATE BETWEEN '".$date."' AND '".$d->aujourdhui()."'";
+				}
+			
+			}
+	
+			$req4=  $req4." AND OFFRE_STATUT > 0 ORDER BY DATE_MISE_EN_VALEUR DESC, OFFRE_DATE;";
+		}
+		else
+		{
+			echo "Veuillez corrrige vos erreurs";
+		}		
+	}
+	
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+	
+	include 'content/formulaire_recherche_d.php'; // Formulaire de la rechercher détaillé
+	
+
+	if (isset($req4))
+	{
+		$exReq4=mysql_query($req4) or die("requete 1 invalide : " . mysql_error());
+		$resuReq4=mysql_fetch_array($exReq4);
+	 
+		$nombredAnnonce = mysql_num_rows($exReq4); // on récupere le nombre pour ensuite prévenir l'utisateur dans le cas où il y aurai aucune annonce passédant les critère spécifier.
+	 
+		echo '<DIV style="margin-left: 50px; margin-top: 60px;"> ';
+	 
+		if ($nombredAnnonce >= 1) // dans le cas où il y a des annonces
+		{
+			$nombreDAnnonceParPage = 10;  // on stock le nombre annonces voulu par page ( pour l'instant on le met en dur possibilité d'évolution)
+			$nombrePage = ceil($nombredAnnonce / $nombreDAnnonceParPage); // on calcule le nombre de page necessaire pour afficher la totalité des annonces.
+		
+			// Dans le cas où l'utilisateur a choisi une page préalablement
+			if (isset($_POST['annonce']))
+			{
+				$page = $_POST['annonce']; 
+			}
+		
+			else // sinon on le placera sur la 1 ere
+			{
+				$page = 1; 
+			}
+			
+			
+			$premiereAnn = ($page-1) * $nombreDAnnonceParPage; // on calcule l'index de la 1ere annonce de la page en fonction du nombre d'annonce par page et sur quelle page est-on positionner.
+			$dernierAnn = $premiereAnn + $nombreDAnnonceParPage; // ainsi que la dernière. 
+			
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+			
+			$cpt = 0; // on initialise le compteur qui sera en faite l'index de l'enregistrement on nous seront positionné
+			include('fonctions/affiche_min_annonce.php');
+			while($resuReq4)
+			{
+				if ( $cpt < $dernierAnn && $cpt >= $premiereAnn)
+				{	
+					if ( $cpt != $dernierAnn && $cpt != $premiereAnn)
+					{
+						echo '<hr noshade style="width:300px; height:1px; margin-top: 40px; border-color: #ff8c00;"><br />';
+					}	
+				
+					aff_annonce($resuReq4);
+				}
+				$cpt++;
+				$resuReq4=mysql_fetch_array($exReq4);
+			}
+			
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+			
+			if($nombrePage>1)
+			{
+				echo '<center>';
+				echo '<TABLE>';
+				echo '<TR>';
+				
+				echo '<TD style="padding-top:0px;">Page :</TD> ';
+				for ($j = 1 ; $j <= $nombrePage ; $j++)
+				{	
+					echo '<TD>';
+					if ( $j > ($page - 10) && $j < ($page + 10) && $j != $page )
+					{
+					if($j > 1)
+					{
+						$p=$j-1;
+					}
+					else
+					{
+						$p=$j;
+					}
+					echo '<form name="elements'.$j.'" id="elements'.$j.'" method="POST" action="'.chaine_titre($mot_cle).'_'.$type_prod.'-recherche_detail-2.html">
+								<span id="rd" >
+								<INPUT TYPE=HIDDEN NAME="mot" VALUE="'.$mot_cle.'">
+								<INPUT TYPE=HIDDEN NAME="type_produit" VALUE="'.$type_prod.'">
+								<INPUT TYPE=HIDDEN NAME="regi" VALUE="'.$region.'">
+								<INPUT TYPE=HIDDEN NAME="depart" VALUE="'.$departement.'">
+								<INPUT TYPE=HIDDEN NAME="ville" VALUE="'.$ville.'">
+								<INPUT TYPE=HIDDEN NAME="vendeur" VALUE="'.$type_vend.'">
+								<INPUT TYPE=HIDDEN NAME="typeAnnonce"  VALUE="'.$type_ann.'">
+								<INPUT TYPE=HIDDEN NAME="photo" VALUE="'.$photo.'">
+								<INPUT TYPE=HIDDEN NAME="date" VALUE="'.$fraicheur.'">
+								<INPUT TYPE=HIDDEN NAME="prixmin" VALUE="'.$prix_min.'">
+								<INPUT TYPE=HIDDEN NAME="prixmax" VALUE="'.$prix_max.'">
+								<INPUT TYPE=HIDDEN NAME="annonce" VALUE="'.$j.'">
+								<a href="javascript:document.getElementById(\'elements'.$j.'\').submit();" > ' . $j . ' </a></span>
+								</form>';
+					}
+					else
+					{
+						if ($j == $page)
+						{
+							echo ' <span style="font-size: 2em; background-color: #006090; color : white;" > '.$j.'</span> ';
+						}
+					}
+					echo '</TD>';
+				}	
+				echo '</TR>';
+				echo '</TABLE>';
+				
+				echo '</center>';
+			}
+		
+		}	
+		else
+		{
+			echo '<DIV style="margin-left: 190px; margin-top: 170px;" >désolé, il y a aucune annonce qui correspond à vos critères de recherche.</DIV>';
+		}
+	 
+		echo '</DIV><BR/> ';
+	}
+?>
